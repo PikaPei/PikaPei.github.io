@@ -6,15 +6,34 @@
     <description>Recent content in Blog on PikaPei&#39;s Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://PikaPei.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://PikaPei.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>神經科學與資訊理論 - Part 1</title>
+      <link>https://PikaPei.github.io/blog/20201109-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part1/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://PikaPei.github.io/blog/20201109-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part1/</guid>
+      <description>筆者亦初識資訊理論(information theory)，若理解有誤也請不吝指教。本文內容大多源於〈A tutorial for information theory in neuroscience〉這篇回顧論文，此篇以較淺白方式介紹資訊理論及其於神經科學上之應用。若有興趣深入的讀者，不妨參閱經典教科書《Elements of Information Theory》[1]、交通大學陳伯寧老師開設之線上課程[2]、或其他參考資料[3]。 為何需要資訊理論？ 我們常常會聽到，神經系統負責整合感官接收到的訊息，經過中樞處理後，再送往下游產生相應動作；又或者是，神經元相接形成神經網路，訊息在神經元間傳遞，大腦得以對其進行編碼、運算、儲存等等。&amp;ldquo;訊息&amp;rdquo; 等類似辭彙雖頻繁出現，但其含義也十分模糊，我們如何描述神經元攜帶了多少訊息？兩神經元是否共享了某些訊息？此類問題顯然需要一個量化訊息的方式，而資訊理論正是合適之工具。 資訊理論的優點  無需依賴對應模型(model independent)：不需先假設目標結構(如：事先假設好神經群之間的連結關係，才進行分析)，具有更廣泛的應用場景。 可同時分析不同型態的資料，包含離散型和連續型資料，也有助於分析跨尺度的交互關係(如神經元層級 vs 腦區層級)：  離散型資料：如有無產生動作電位、實驗動物有無產生特定行為模式 連續型資料：如膜電位變化、螢光強度變化、實驗動物位置或速度   可偵測線性和非線性的交互關係 可用於多變量分析 一般而言，輸出的單位皆為bits (後文會加以介紹)，因此在不同實驗結果下比較會相對直觀(但並非可以直接比較)。   資訊理論的限制  無法建構描述系統如何運作的模型：
+如：分析結果得知，A與B共享了0.05 bits的資訊，但是我們無法更進一步知道A與B是否存在直接連結，即使有，也不知道是興奮性或抑制性連結。  話雖如此，仍能透過資訊理論排除不可能的模型，限縮尋找目標的範圍。 資訊熵 (Shannon Entropy) 首先，要得知訊息量多寡的方式，是這條訊息可以消除多少來自問題的不確定性(uncertainty)。
+例如這個問題：今天晚餐要吃什麼？
+A：都可以
+B：校外好遠，在校內吃就好
+C：吃小7
+很明顯的，訊息量C &amp;gt; B &amp;gt; A，又A的回答不具任何訊息量。
+因此，在測定訊息量之前，得先衡量出不確定性。Claude Shannon提出以資訊熵\(H(X)\) (Shannon entropy)來量化不確定性，不確定性越高，熵也就越大。
+(註：熵一詞源自於熱力學，用以描述系統無序的程度，資訊熵和熱力學的熵二者在定義及概念下皆具有相似性。)
+(註：為何是以\(H\)作為代號，可參考資料[4]。)
+$$H(X) = - \sum_{x \in X} P(x)\ \log_{2}P(x)$$
+公式中的\(X\)包含了所有可能狀態的\(x\)。   擲一公平硬幣，正面、反面機率皆為\(\frac{1}{2}\)，對於 &amp;ldquo;朝上的是哪一面？&amp;rdquo; 這個問題的不確定性：</description>
+    </item>
+    
     <item>
       <title>記憶形成的分子機制</title>
       <link>https://PikaPei.github.io/blog/20201012-%E8%A8%98%E6%86%B6%E5%BD%A2%E6%88%90%E7%9A%84%E5%88%86%E5%AD%90%E6%A9%9F%E5%88%B6/</link>
       <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://PikaPei.github.io/blog/20201012-%E8%A8%98%E6%86%B6%E5%BD%A2%E6%88%90%E7%9A%84%E5%88%86%E5%AD%90%E6%A9%9F%E5%88%B6/</guid>
-      <description>當歷經新的體驗，新形成之記憶會儲存於記憶痕跡細胞(engram cell)中，而再次回想起這些記憶時，記憶痕跡細胞會再度被活化[1][2]。雖然已知記憶痕跡細胞掌管了記憶的生殺大權，但記憶從編碼(encoding)、固化(consolidation)、到提取(retrieval)需要多項基因表達和合成蛋白質的協同作用，其中分子機制依然是個謎團。麻省理工學院的研究團隊透過分析記憶痕跡細胞在各記憶時期的染色質開放性(chromatin accessibility)、基因體三維結構(3D genomic architecture)、基因表現(gene expression)，闡述一系列染色質的動態變化，研究成果發表在Nature Neuroscience期刊。
-實驗設計：標記各記憶時期之記憶痕跡細胞 研究團隊使用TRAP (targeted recombination in active populations)模型小鼠，這可以讓特定時間區段活化的神經產生螢光蛋白，達成永久標記目標神經之目的。
+      <description>當歷經新的體驗，新形成之記憶會儲存於記憶痕跡細胞(engram cell)中，而再次回想起這些記憶時，記憶痕跡細胞會再度被活化[1][2]。雖然已知記憶痕跡細胞掌管了記憶的生殺大權，但記憶從編碼(encoding)、固化(consolidation)、到提取(retrieval)需要多項基因表達和合成蛋白質的協同作用，其中分子機制依然是個謎團。麻省理工學院的研究團隊透過分析記憶痕跡細胞在各記憶時期的染色質開放性(chromatin accessibility)、基因體三維結構(3D genomic architecture)、基因表現(gene expression)，闡述一系列染色質的動態變化，研究成果發表在Nature Neuroscience期刊。 實驗設計：標記各記憶時期之記憶痕跡細胞 研究團隊使用TRAP (targeted recombination in active populations)模型小鼠，這可以讓特定時間區段活化的神經產生螢光蛋白，達成永久標記目標神經之目的。
 如Fig. 1，實驗一開始讓小鼠接收情境恐懼制約(contextual fear conditioning，這邊使用聲音+電擊)，以形成恐懼記憶，並同時在此階段標記活化的神經(Day 1 灰底區間)。五天後，將小鼠分成兩組，一組會再讓小鼠回到恐懼記憶的環境中，另一組則否。
 整個實驗有4個觀察對象：
  基礎狀態神經 (Basal) 活化神經(早) (Activated-early) 活化神經(晚) (Activated-late) 再活化神經 (Reactivated)  根據上述4個觀察對象，可以比較出3個記憶時期帶來的影響：
