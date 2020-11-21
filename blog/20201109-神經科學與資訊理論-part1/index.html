@@ -27,7 +27,7 @@ $$H(X) = - \sum_{x \in X} P(x)\ \log_{2}P(x)$$
 公式中的\(X\)包含了所有可能狀態的\(x\)。   擲一公平硬幣，正面、反面機率皆為\(\frac{1}{2}\)，對於 &ldquo;朝上的是哪一面？&rdquo; 這個問題的不確定性：">
 <meta itemprop="datePublished" content="2020-11-09T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-11-09T00:00:00+00:00" />
-<meta itemprop="wordCount" content="175">
+<meta itemprop="wordCount" content="215">
 <meta itemprop="image" content="">
 
 
@@ -180,7 +180,7 @@ $$H(X) = - \sum_{x \in X} P(x)\ \log_{2}P(x)$$
   <div class="meta">
     <time datetime="2020-11-09 00:00:00 &#43;0000 UTC">November 9, 2020</time>
     <p>Pei</p>
-    <p>1-Minute Read</p>
+    <p>2-Minute Read</p>
   </div>
 </header>
 
@@ -230,8 +230,8 @@ $$H(X) = - \sum_{x \in X} P(x)\ \log_{2}P(x)$$
 
     </div>
     <div class="content">
-      <a href="/blog/20201109-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part1/" class="image" style="--bg-image: url('https://PikaPei.github.io/img/2020/1109/fig_1.png');">
-    <img src="https://PikaPei.github.io/img/2020/1109/fig_1.png" alt="Proposed Model">
+      <a href="/blog/20201109-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part1/" class="image" style="--bg-image: url('https://PikaPei.github.io/img/2020/1109/entropy.jpg');">
+    <img src="https://PikaPei.github.io/img/2020/1109/entropy.jpg" alt="Proposed Model">
   </a>
       <p>筆者亦初識資訊理論(information theory)，若理解有誤也請不吝指教。本文內容大多源於〈A tutorial for information theory in neuroscience〉這篇回顧論文，此篇以較淺白方式介紹資訊理論及其於神經科學上之應用。若有興趣深入的讀者，不妨參閱經典教科書《Elements of Information Theory》[1]、交通大學陳伯寧老師開設之線上課程[2]、或其他參考資料[3]。
 <br><br></p>
@@ -309,8 +309,38 @@ C：吃小7<br>
 </ul>
 <h2 id="小結">小結</h2>
 <p>本文目前簡單介紹了資訊理論的優點和限制，並引入到資訊理論最基礎的量&ndash;熵，熵代表了不確定性，而資訊量則等同減少不確定性的程度。下一篇文中，將從一個變量增加到二個(可推廣至多變量)，並介紹聯合熵、條件熵(conditional entropy)、相互資訊(mutual information)等等在資訊理論中重要的概念。</p>
-<p>資訊代表了減少不確定性！
-<br><br></p>
+<p>
+
+<style>
+  #callout {
+    background: #F9F9F9;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+</style>
+
+<div id="callout" style="">
+  <div>💡</div>
+	<div id="callout-inner">
+    資訊代表了減少不確定性！
+  </div>
+</div>
+
+<br></p>
 <p>原始論文：</p>
 <p>Timme, N. M. &amp; Lapish, C. A tutorial for information theory in neuroscience. <em>eNeuro</em> 5, (2018) doi:<a href='http://doi.org/10.1523/ENEURO.0052-18.2018' target='_blank'>10.1523/ENEURO.0052-18.2018</a>.
 <br><br></p>
@@ -412,8 +442,8 @@ C：吃小7<br>
       </header>
       
       <article class="mini-post">
-          <a href="/blog/20201109-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part1/" class="image" style="--bg-image: url('https://PikaPei.github.io/img/2020/1109/fig_1.png');">
-    <img src="https://PikaPei.github.io/img/2020/1109/fig_1.png" alt="Proposed Model">
+          <a href="/blog/20201109-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part1/" class="image" style="--bg-image: url('https://PikaPei.github.io/img/2020/1109/entropy.jpg');">
+    <img src="https://PikaPei.github.io/img/2020/1109/entropy.jpg" alt="Proposed Model">
   </a>
         <header>
           <h2><a href="/blog/20201109-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part1/">神經科學與資訊理論 - Part 1</a></h2>
