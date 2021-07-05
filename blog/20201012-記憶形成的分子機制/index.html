@@ -12,47 +12,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.81.0" /><meta itemprop="name" content="記憶形成的分子機制">
-<meta itemprop="description" content="當歷經新的體驗，新形成之記憶會儲存於記憶痕跡細胞(engram cell)中，而再次回想起這些記憶時，記憶痕跡細胞會再度被活化[1][2]。雖然已知記憶痕跡細胞掌管了記憶的生殺大權，但記憶從編碼(encoding)、固化(consolidation)、到提取(retrieval)需要多項基因表達和合成蛋白質的協同作用，其中分子機制依然是個謎團。麻省理工學院的研究團隊透過分析記憶痕跡細胞在各記憶時期的染色質開放性(chromatin accessibility)、基因體三維結構(3D genomic architecture)、基因表現(gene expression)，闡述一系列染色質的動態變化，研究成果發表在Nature Neuroscience期刊。 實驗設計：標記各記憶時期之記憶痕跡細胞 研究團隊使用TRAP (targeted recombination in active populations)模型小鼠，這可以讓特定時間區段活化的神經產生螢光蛋白，達成永久標記目標神經之目的。
-如Fig. 1，實驗一開始讓小鼠接收情境恐懼制約(contextual fear conditioning，這邊使用聲音&#43;電擊)，以形成恐懼記憶，並同時在此階段標記活化的神經(Day 1 灰底區間)。五天後，將小鼠分成兩組，一組會再讓小鼠回到恐懼記憶的環境中，另一組則否。
-整個實驗有4個觀察對象：
- 基礎狀態神經 (Basal) 活化神經(早) (Activated-early) 活化神經(晚) (Activated-late) 再活化神經 (Reactivated)  根據上述4個觀察對象，可以比較出3個記憶時期帶來的影響：
- 記憶編碼：基礎狀態神經 → 活化神經(早) 記憶固化：活化神經(早) → 活化神經(晚) 記憶提取：活化神經(晚)、再活化神經    Fig. 1. 實驗設計 (原論文 Fig. 1a)
-  染色質開放性 透過ATAC-seq技術[3]，加上分析染色質開放變化區域(differentially accessible regions, DARs)，可以比較不同記憶時期染色質的各個片段開放性上升或是下降，開放性較高、或說較鬆散的染色質，愈容易被其他因子調控。
-結果顯示，記憶編碼階段染色質開放性上升的區域較多，並且這些區域多位於基因與基因之間(intergenic)，後續分析指出這些基因間隔區主要為增強子(enhancer)，增強子在不同因子的調控下會影響基因轉錄效率，而後續記憶固化、提取對染色質開放性影響較小。 基因體三維結構 透過染色體構象捕獲技術(chromosome conformation capture, Hi-C)[4]，可以分析DNA片段在空間中是否靠近，並依此區分出染色質片段為活躍態(active)或非活躍態(inactive)。
-研究團隊發現在記憶編碼、記憶固化階段，都有非活躍態→活躍態、活躍態→非活躍態間的互相轉換。不過有一些片段自記憶編碼時從非活躍態轉換至活躍態，就一直維持在活躍態，包括記憶固化時，並且這些片段和前段所述於記憶編碼階段染色質開放性上升片段大幅重疊，再次驗證了記憶形成初期對染色質之影響。
-另外的分析顯示，在不同記憶階段，同樣的啟動子(promoter)，有較高的機率跟不同增強子交互作用。而且在記憶提取階段，啟動子-增強子交互作用更比其他階段來得高。研究團隊說明，在記憶編碼階段染色質開放性上升是一種&quot;誘發事件(priming event)&quot;，可以讓後續其他記憶階段有不同的啟動子-增強子交互作用，藉由表觀遺傳(epigenetic state)來調控不同狀態下的記憶功能。 基因表現 前述的分析說明記憶形成對染色質開放性和啟動子-增強子交互作用的影響，但最終還是要藉由核RNA定序(nRNA-seq)和分析基因表現變化(differentially expressed gene, DEG)，來觀察二者是否影響基因表現。"><meta itemprop="datePublished" content="2020-10-12T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-10-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="120"><meta itemprop="image" content="">
-<meta itemprop="keywords" content="memory,engram,hippocampus," /><meta property="og:title" content="記憶形成的分子機制" />
-<meta property="og:description" content="當歷經新的體驗，新形成之記憶會儲存於記憶痕跡細胞(engram cell)中，而再次回想起這些記憶時，記憶痕跡細胞會再度被活化[1][2]。雖然已知記憶痕跡細胞掌管了記憶的生殺大權，但記憶從編碼(encoding)、固化(consolidation)、到提取(retrieval)需要多項基因表達和合成蛋白質的協同作用，其中分子機制依然是個謎團。麻省理工學院的研究團隊透過分析記憶痕跡細胞在各記憶時期的染色質開放性(chromatin accessibility)、基因體三維結構(3D genomic architecture)、基因表現(gene expression)，闡述一系列染色質的動態變化，研究成果發表在Nature Neuroscience期刊。 實驗設計：標記各記憶時期之記憶痕跡細胞 研究團隊使用TRAP (targeted recombination in active populations)模型小鼠，這可以讓特定時間區段活化的神經產生螢光蛋白，達成永久標記目標神經之目的。
-如Fig. 1，實驗一開始讓小鼠接收情境恐懼制約(contextual fear conditioning，這邊使用聲音&#43;電擊)，以形成恐懼記憶，並同時在此階段標記活化的神經(Day 1 灰底區間)。五天後，將小鼠分成兩組，一組會再讓小鼠回到恐懼記憶的環境中，另一組則否。
-整個實驗有4個觀察對象：
- 基礎狀態神經 (Basal) 活化神經(早) (Activated-early) 活化神經(晚) (Activated-late) 再活化神經 (Reactivated)  根據上述4個觀察對象，可以比較出3個記憶時期帶來的影響：
- 記憶編碼：基礎狀態神經 → 活化神經(早) 記憶固化：活化神經(早) → 活化神經(晚) 記憶提取：活化神經(晚)、再活化神經    Fig. 1. 實驗設計 (原論文 Fig. 1a)
-  染色質開放性 透過ATAC-seq技術[3]，加上分析染色質開放變化區域(differentially accessible regions, DARs)，可以比較不同記憶時期染色質的各個片段開放性上升或是下降，開放性較高、或說較鬆散的染色質，愈容易被其他因子調控。
-結果顯示，記憶編碼階段染色質開放性上升的區域較多，並且這些區域多位於基因與基因之間(intergenic)，後續分析指出這些基因間隔區主要為增強子(enhancer)，增強子在不同因子的調控下會影響基因轉錄效率，而後續記憶固化、提取對染色質開放性影響較小。 基因體三維結構 透過染色體構象捕獲技術(chromosome conformation capture, Hi-C)[4]，可以分析DNA片段在空間中是否靠近，並依此區分出染色質片段為活躍態(active)或非活躍態(inactive)。
-研究團隊發現在記憶編碼、記憶固化階段，都有非活躍態→活躍態、活躍態→非活躍態間的互相轉換。不過有一些片段自記憶編碼時從非活躍態轉換至活躍態，就一直維持在活躍態，包括記憶固化時，並且這些片段和前段所述於記憶編碼階段染色質開放性上升片段大幅重疊，再次驗證了記憶形成初期對染色質之影響。
-另外的分析顯示，在不同記憶階段，同樣的啟動子(promoter)，有較高的機率跟不同增強子交互作用。而且在記憶提取階段，啟動子-增強子交互作用更比其他階段來得高。研究團隊說明，在記憶編碼階段染色質開放性上升是一種&quot;誘發事件(priming event)&quot;，可以讓後續其他記憶階段有不同的啟動子-增強子交互作用，藉由表觀遺傳(epigenetic state)來調控不同狀態下的記憶功能。 基因表現 前述的分析說明記憶形成對染色質開放性和啟動子-增強子交互作用的影響，但最終還是要藉由核RNA定序(nRNA-seq)和分析基因表現變化(differentially expressed gene, DEG)，來觀察二者是否影響基因表現。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://PikaPei.github.io/blog/20201012-%E8%A8%98%E6%86%B6%E5%BD%A2%E6%88%90%E7%9A%84%E5%88%86%E5%AD%90%E6%A9%9F%E5%88%B6/" /><meta property="og:image" content="" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2020-10-12T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-10-12T00:00:00&#43;00:00" />
-
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content=""/>
-
-<meta name="twitter:title" content="記憶形成的分子機制"/>
-<meta name="twitter:description" content="當歷經新的體驗，新形成之記憶會儲存於記憶痕跡細胞(engram cell)中，而再次回想起這些記憶時，記憶痕跡細胞會再度被活化[1][2]。雖然已知記憶痕跡細胞掌管了記憶的生殺大權，但記憶從編碼(encoding)、固化(consolidation)、到提取(retrieval)需要多項基因表達和合成蛋白質的協同作用，其中分子機制依然是個謎團。麻省理工學院的研究團隊透過分析記憶痕跡細胞在各記憶時期的染色質開放性(chromatin accessibility)、基因體三維結構(3D genomic architecture)、基因表現(gene expression)，闡述一系列染色質的動態變化，研究成果發表在Nature Neuroscience期刊。 實驗設計：標記各記憶時期之記憶痕跡細胞 研究團隊使用TRAP (targeted recombination in active populations)模型小鼠，這可以讓特定時間區段活化的神經產生螢光蛋白，達成永久標記目標神經之目的。
-如Fig. 1，實驗一開始讓小鼠接收情境恐懼制約(contextual fear conditioning，這邊使用聲音&#43;電擊)，以形成恐懼記憶，並同時在此階段標記活化的神經(Day 1 灰底區間)。五天後，將小鼠分成兩組，一組會再讓小鼠回到恐懼記憶的環境中，另一組則否。
-整個實驗有4個觀察對象：
- 基礎狀態神經 (Basal) 活化神經(早) (Activated-early) 活化神經(晚) (Activated-late) 再活化神經 (Reactivated)  根據上述4個觀察對象，可以比較出3個記憶時期帶來的影響：
- 記憶編碼：基礎狀態神經 → 活化神經(早) 記憶固化：活化神經(早) → 活化神經(晚) 記憶提取：活化神經(晚)、再活化神經    Fig. 1. 實驗設計 (原論文 Fig. 1a)
-  染色質開放性 透過ATAC-seq技術[3]，加上分析染色質開放變化區域(differentially accessible regions, DARs)，可以比較不同記憶時期染色質的各個片段開放性上升或是下降，開放性較高、或說較鬆散的染色質，愈容易被其他因子調控。
-結果顯示，記憶編碼階段染色質開放性上升的區域較多，並且這些區域多位於基因與基因之間(intergenic)，後續分析指出這些基因間隔區主要為增強子(enhancer)，增強子在不同因子的調控下會影響基因轉錄效率，而後續記憶固化、提取對染色質開放性影響較小。 基因體三維結構 透過染色體構象捕獲技術(chromosome conformation capture, Hi-C)[4]，可以分析DNA片段在空間中是否靠近，並依此區分出染色質片段為活躍態(active)或非活躍態(inactive)。
-研究團隊發現在記憶編碼、記憶固化階段，都有非活躍態→活躍態、活躍態→非活躍態間的互相轉換。不過有一些片段自記憶編碼時從非活躍態轉換至活躍態，就一直維持在活躍態，包括記憶固化時，並且這些片段和前段所述於記憶編碼階段染色質開放性上升片段大幅重疊，再次驗證了記憶形成初期對染色質之影響。
-另外的分析顯示，在不同記憶階段，同樣的啟動子(promoter)，有較高的機率跟不同增強子交互作用。而且在記憶提取階段，啟動子-增強子交互作用更比其他階段來得高。研究團隊說明，在記憶編碼階段染色質開放性上升是一種&quot;誘發事件(priming event)&quot;，可以讓後續其他記憶階段有不同的啟動子-增強子交互作用，藉由表觀遺傳(epigenetic state)來調控不同狀態下的記憶功能。 基因表現 前述的分析說明記憶形成對染色質開放性和啟動子-增強子交互作用的影響，但最終還是要藉由核RNA定序(nRNA-seq)和分析基因表現變化(differentially expressed gene, DEG)，來觀察二者是否影響基因表現。"/>
-<link rel="stylesheet" href="/css/bundle.min.7af44880fa8f2867fbbf1b1e6758774b791bf321699b23f84be69e26e842c64a.css" integrity="sha256-evRIgPqPKGf7vxseZ1h3S3kb8yFpmyP4S&#43;aeJuhCxko="><link rel="stylesheet" href="/css/add-on.css">
+<meta name="generator" content="Hugo 0.84.4" /><meta property="og:site_name" content="PikaPei&#39;s Website">
+  <meta property="og:title" content="記憶形成的分子機制">
+  <meta property="og:description" content="Pei&#39;s Personal Website">
+  <meta property="description" content="Pei&#39;s Personal Website">
+  <meta property="og:url" content="https://PikaPei.github.io/blog/20201012-%E8%A8%98%E6%86%B6%E5%BD%A2%E6%88%90%E7%9A%84%E5%88%86%E5%AD%90%E6%A9%9F%E5%88%B6/">
+  <meta property="og:type" content="article">
+  
+    
+      <meta property="og:image" content="https://PikaPei.github.io/img/2020/1012/fig_2.png">
+      <meta property="og:image:alt" content="Proposed Model">
+    
+  
+  <link rel="stylesheet" href="/css/bundle.min.9c2a75c4f520b5d59d87d4cf39ed10a4b84ec7d76e271aef0f42dde031110cd4.css" integrity="sha256-nCp1xPUgtdWdh9TPOe0QpLhOx9duJxrvD0Ld4DERDNQ="><link rel="stylesheet" href="/css/add-on.css">
 </head>
 
   <body>
@@ -76,19 +48,66 @@
       
         
           
-          <a href="/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+          <a href="/about" class="nav link"><i class='far fa-id-card'></i> About</a>
         
       
-      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
       <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
     </menu>
     <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
-    
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
     
     <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
   </nav>
   <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
   
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=%e8%a8%98%e6%86%b6%e5%bd%a2%e6%88%90%e7%9a%84%e5%88%86%e5%ad%90%e6%a9%9f%e5%88%b6&amp;url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201012-%25E8%25A8%2598%25E6%2586%25B6%25E5%25BD%25A2%25E6%2588%2590%25E7%259A%2584%25E5%2588%2586%25E5%25AD%2590%25E6%25A9%259F%25E5%2588%25B6%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201012-%25E8%25A8%2598%25E6%2586%25B6%25E5%25BD%25A2%25E6%2588%2590%25E7%259A%2584%25E5%2588%2586%25E5%25AD%2590%25E6%25A9%259F%25E5%2588%25B6%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201012-%25E8%25A8%2598%25E6%2586%25B6%25E5%25BD%25A2%25E6%2588%2590%25E7%259A%2584%25E5%2588%2586%25E5%25AD%2590%25E6%25A9%259F%25E5%2588%25B6%2f&amp;title=%e8%a8%98%e6%86%b6%e5%bd%a2%e6%88%90%e7%9a%84%e5%88%86%e5%ad%90%e6%a9%9f%e5%88%b6" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201012-%25E8%25A8%2598%25E6%2586%25B6%25E5%25BD%25A2%25E6%2588%2590%25E7%259A%2584%25E5%2588%2586%25E5%25AD%2590%25E6%25A9%259F%25E5%2588%25B6%2f&amp;title=%e8%a8%98%e6%86%b6%e5%bd%a2%e6%88%90%e7%9a%84%e5%88%86%e5%ad%90%e6%a9%9f%e5%88%b6" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201012-%25E8%25A8%2598%25E6%2586%25B6%25E5%25BD%25A2%25E6%2588%2590%25E7%259A%2584%25E5%2588%2586%25E5%25AD%2590%25E6%25A9%259F%25E5%2588%25B6%2f&amp;description=%e8%a8%98%e6%86%b6%e5%bd%a2%e6%88%90%e7%9a%84%e5%88%86%e5%ad%90%e6%a9%9f%e5%88%b6" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Pei&amp;body=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201012-%25E8%25A8%2598%25E6%2586%25B6%25E5%25BD%25A2%25E6%2588%2590%25E7%259A%2584%25E5%2588%2586%25E5%25AD%2590%25E6%25A9%259F%25E5%2588%25B6%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
   
 </header>
 
@@ -154,8 +173,9 @@
 
       <main id="site-main">
         
-  <article class="post">
-    <header>
+  <article>
+    <div class="post">
+      <header>
   <div class="title">
     
       <h2><a href="/blog/20201012-%E8%A8%98%E6%86%B6%E5%BD%A2%E6%88%90%E7%9A%84%E5%88%86%E5%AD%90%E6%A9%9F%E5%88%B6/">記憶形成的分子機制</a></h2>
@@ -169,56 +189,56 @@
   </div>
 </header>
 
-    <div id="socnet-share">
-      
+      <div id="socnet-share">
+        
 
 
 
 
   
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
+    
+    <a href="//twitter.com/share?text=%e8%a8%98%e6%86%b6%e5%bd%a2%e6%88%90%e7%9a%84%e5%88%86%e5%ad%90%e6%a9%9f%e5%88%b6&amp;url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201012-%25E8%25A8%2598%25E6%2586%25B6%25E5%25BD%25A2%25E6%2588%2590%25E7%259A%2584%25E5%2588%2586%25E5%25AD%2590%25E6%25A9%259F%25E5%2588%25B6%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
   
 
   
-  
-  
-  
-  
-
-  
-  
-  
-  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201012-%25E8%25A8%2598%25E6%2586%25B6%25E5%25BD%25A2%25E6%2588%2590%25E7%259A%2584%25E5%2588%2586%25E5%25AD%2590%25E6%25A9%259F%25E5%2588%25B6%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
   
 
   
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201012-%25E8%25A8%2598%25E6%2586%25B6%25E5%25BD%25A2%25E6%2588%2590%25E7%259A%2584%25E5%2588%2586%25E5%25AD%2590%25E6%25A9%259F%25E5%2588%25B6%2f&amp;title=%e8%a8%98%e6%86%b6%e5%bd%a2%e6%88%90%e7%9a%84%e5%88%86%e5%ad%90%e6%a9%9f%e5%88%b6" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
   
+
   
-  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201012-%25E8%25A8%2598%25E6%2586%25B6%25E5%25BD%25A2%25E6%2588%2590%25E7%259A%2584%25E5%2588%2586%25E5%25AD%2590%25E6%25A9%259F%25E5%2588%25B6%2f&amp;title=%e8%a8%98%e6%86%b6%e5%bd%a2%e6%88%90%e7%9a%84%e5%88%86%e5%ad%90%e6%a9%9f%e5%88%b6" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
   
 
   
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201012-%25E8%25A8%2598%25E6%2586%25B6%25E5%25BD%25A2%25E6%2588%2590%25E7%259A%2584%25E5%2588%2586%25E5%25AD%2590%25E6%25A9%259F%25E5%2588%25B6%2f&amp;description=%e8%a8%98%e6%86%b6%e5%bd%a2%e6%88%90%e7%9a%84%e5%88%86%e5%ad%90%e6%a9%9f%e5%88%b6" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
   
+
   
-  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Pei&amp;body=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201012-%25E8%25A8%2598%25E6%2586%25B6%25E5%25BD%25A2%25E6%2588%2590%25E7%259A%2584%25E5%2588%2586%25E5%25AD%2590%25E6%25A9%259F%25E5%2588%25B6%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
   
 
 
-    </div>
-    <div class="content">
-      <a href="/blog/20201012-%E8%A8%98%E6%86%B6%E5%BD%A2%E6%88%90%E7%9A%84%E5%88%86%E5%AD%90%E6%A9%9F%E5%88%B6/" class="image" style="--bg-image: url('https://PikaPei.github.io/img/2020/1012/fig_2.png');">
+      </div>
+      <div class="content">
+        <a href="/blog/20201012-%E8%A8%98%E6%86%B6%E5%BD%A2%E6%88%90%E7%9A%84%E5%88%86%E5%AD%90%E6%A9%9F%E5%88%B6/" class="image" style="--bg-image: url('https://PikaPei.github.io/img/2020/1012/fig_2.png');">
     <img src="https://PikaPei.github.io/img/2020/1012/fig_2.png" alt="Proposed Model">
   </a>
-      <p>當歷經新的體驗，新形成之記憶會儲存於記憶痕跡細胞(engram cell)中，而再次回想起這些記憶時，記憶痕跡細胞會再度被活化[1][2]。雖然已知記憶痕跡細胞掌管了記憶的生殺大權，但記憶從編碼(encoding)、固化(consolidation)、到提取(retrieval)需要多項基因表達和合成蛋白質的協同作用，其中分子機制依然是個謎團。麻省理工學院的研究團隊透過分析記憶痕跡細胞在各記憶時期的染色質開放性(chromatin accessibility)、基因體三維結構(3D genomic architecture)、基因表現(gene expression)，闡述一系列染色質的動態變化，研究成果發表在<em>Nature Neuroscience</em>期刊。
+        <p>當歷經新的體驗，新形成之記憶會儲存於記憶痕跡細胞(engram cell)中，而再次回想起這些記憶時，記憶痕跡細胞會再度被活化[1][2]。雖然已知記憶痕跡細胞掌管了記憶的生殺大權，但記憶從編碼(encoding)、固化(consolidation)、到提取(retrieval)需要多項基因表達和合成蛋白質的協同作用，其中分子機制依然是個謎團。麻省理工學院的研究團隊透過分析記憶痕跡細胞在各記憶時期的染色質開放性(chromatin accessibility)、基因體三維結構(3D genomic architecture)、基因表現(gene expression)，闡述一系列染色質的動態變化，研究成果發表在<em>Nature Neuroscience</em>期刊。
 <br><br></p>
 <h2 id="實驗設計標記各記憶時期之記憶痕跡細胞">實驗設計：標記各記憶時期之記憶痕跡細胞</h2>
 <p>研究團隊使用TRAP (targeted recombination in active populations)模型小鼠，這可以讓特定時間區段活化的神經產生螢光蛋白，達成永久標記目標神經之目的。</p>
@@ -236,9 +256,8 @@
 <li>記憶固化：活化神經(早) → 活化神經(晚)</li>
 <li>記憶提取：活化神經(晚)、再活化神經</li>
 </ol>
-<p><figure>
-    <img src="/img/2020/1012/fig_1.png"
-         alt="Fig. 1. 實驗設計 (原論文 Fig. 1a)"/> <figcaption>
+<p><figure><img src="/img/2020/1012/fig_1.png"
+         alt="Fig. 1. 實驗設計 (原論文 Fig. 1a)"/><figcaption>
             <p>Fig. 1. 實驗設計 (原論文 Fig. 1a)</p>
         </figcaption>
 </figure>
@@ -263,9 +282,8 @@
 <p>Early phase，小鼠開始形成新的恐懼記憶，產生誘發效應，使得染色質開放性增加。</p>
 <p>Late phase，產生新的啟動子-增強子交互作用，基因表現量上升並推測以此來穩固記憶。</p>
 <p>Reactivation，其他的啟動子-增強子作用，改變基因表現，使mRNA運輸至突觸並合成新蛋白質。</p>
-<p><figure>
-    <img src="/img/2020/1012/fig_2.png"
-         alt="Fig. 2. 記憶痕跡細胞動態變化模型 (原論文 Extended Data Fig. 8)"/> <figcaption>
+<p><figure><img src="/img/2020/1012/fig_2.png"
+         alt="Fig. 2. 記憶痕跡細胞動態變化模型 (原論文 Extended Data Fig. 8)"/><figcaption>
             <p>Fig. 2. 記憶痕跡細胞動態變化模型 (原論文 Extended Data Fig. 8)</p>
         </figcaption>
 </figure>
@@ -282,9 +300,9 @@
 <li><a href='https://investigator.tw/3183/%E5%A4%A9%E7%84%B6%E7%9A%84%E6%91%BA%E7%B4%99%E8%97%9D%E8%A1%93-%E6%9F%93%E8%89%B2%E8%B3%AA%E7%9A%84-3d-%E7%B5%90%E6%A7%8B/' target='_blank'>天然的摺紙藝術 - 染色質的3D結構</a></li>
 </ol>
 
-    </div>
-    <footer>
-      <div class="stats">
+      </div>
+      <footer>
+        <div class="stats">
   
     <ul class="categories">
       
@@ -309,22 +327,23 @@
   
 </div>
 
-    </footer>
-  </article>
-  
+      </footer>
+    </div>
     
-  <article class="post">
+      
+  <div class='post'>
     
     <div>
-      <h2 id="say-something">Say Something</h2>
-        <form id="comment-form" class="new-comment" method="POST">
+      <h2 id='say-something'>Say Something</h2>
+        <form id='comment-form' class='new-comment' method='POST'>
           
           <h3 class='reply-notice hidden'>
             <span class='reply-name'></span>
+            <a class='reply-close-btn button'><i class='fas fa-times'></i></a>
           </h3>
 
           
-          <input type="hidden" name="options[entryId]" value="aceba34f91d6315737ead725525b6f9d">
+          <input type='hidden' name='options[entryId]' value='aceba34f91d6315737ead725525b6f9d'>
           <input type='hidden' name='fields[replyThread]' value=''>
           <input type='hidden' name='fields[replyID]' value=''>
           <input type='hidden' name='fields[replyName]' value=''>
@@ -345,21 +364,22 @@
           </div>
 
           
-          <input type='submit' value='Submit' class='button'>
-          <input type='submit' value='Submitted' class='hidden button' disabled>
-          <input type='reset' value='Reset' class='button'>
+          <button type='button' id="comment-form-submit" class='button'>Submit</button>
+          <button type='button' id="comment-form-submitted" class='hidden button' disabled>Submitted</button>
+          <button type='reset' id="comment-form-reset" class='button'>Reset</button>
         </form>
     </div>
 
     
-    <div>
+    <div class='comments-container'>
       <h2>Comments</h2><p>Nothing yet.</p>
       
     </div>
+  </div>
+
+
+    
   </article>
-
-
-  
   <div class="pagination">
     
       <a href="/blog/20201109-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part1/" class="button left"><span>神經科學與資訊理論 - Part 1</span></a>
@@ -498,14 +518,14 @@
   <p class="copyright">
     © 2021 PikaPei&#39;s Website
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.81.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.84.4' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/js/highlight.js"></script>
     
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.1ac7a98b06451b2770fdaaee2f67721ab7e137a5fee8352dc78a33e7a69b3244.js" integrity="sha256-GsepiwZFGydw/aruL2dyGrfhN6X&#43;6DUtx4oz56abMkQ="></script>
+    <script>hljs.highlightAll();</script><script src="/js/bundle.min.e12d5faf9cdc55cc549dd52209d493a7c6888b245bd477642ab710f7303fc98c.js" integrity="sha256-4S1fr5zcVcxUndUiCdSTp8aIiyRb1HdkKrcQ9zA/yYw="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

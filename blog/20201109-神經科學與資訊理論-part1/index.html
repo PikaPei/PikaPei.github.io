@@ -12,56 +12,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.81.0" /><meta itemprop="name" content="神經科學與資訊理論 - Part 1">
-<meta itemprop="description" content="筆者亦初識資訊理論(information theory)，若理解有誤也請不吝指教。本文內容大多源於〈A tutorial for information theory in neuroscience〉這篇回顧論文，此篇以較淺白方式介紹資訊理論及其於神經科學上之應用。若有興趣深入的讀者，不妨參閱經典教科書《Elements of Information Theory》[1]、交通大學陳伯寧老師開設之線上課程[2]、或其他參考資料[3]。 為何需要資訊理論？ 我們常常會聽到，神經系統負責整合感官接收到的訊息，經過中樞處理後，再送往下游產生相應動作；又或者是，神經元相接形成神經網路，訊息在神經元間傳遞，大腦得以對其進行編碼、運算、儲存等等。&ldquo;訊息&rdquo; 等類似辭彙雖頻繁出現，但其含義也十分模糊，我們如何描述神經元攜帶了多少訊息？兩神經元是否共享了某些訊息？此類問題顯然需要一個量化訊息的方式，而資訊理論正是合適之工具。 資訊理論的優點  無需依賴對應模型(model independent)：不需先假設目標結構(如：事先假設好神經群之間的連結關係，才進行分析)，具有更廣泛的應用場景。 可同時分析不同型態的資料，包含離散型和連續型資料，也有助於分析跨尺度的交互關係(如神經元層級 vs 腦區層級)：  離散型資料：如有無產生動作電位、實驗動物有無產生特定行為模式 連續型資料：如膜電位變化、螢光強度變化、實驗動物位置或速度   可偵測線性和非線性的交互關係 可用於多變量分析 一般而言，輸出的單位皆為bits (後文會加以介紹)，因此在不同實驗結果下比較會相對直觀(但並非可以直接比較)。   資訊理論的限制  無法建構描述系統如何運作的模型：
-如：分析結果得知，A與B共享了0.05 bits的資訊，但是我們無法更進一步知道A與B是否存在直接連結，即使有，也不知道是興奮性或抑制性連結。  話雖如此，仍能透過資訊理論排除不可能的模型，限縮尋找目標的範圍。 資訊熵 (Shannon Entropy) 首先，要得知訊息量多寡的方式，是這條訊息可以消除多少來自問題的不確定性(uncertainty)。
-例如這個問題：今天晚餐要吃什麼？
-A：都可以
-B：校外好遠，在校內吃就好
-C：吃小7
-很明顯的，訊息量C &gt; B &gt; A，又A的回答不具任何訊息量。
-因此，在測定訊息量之前，得先衡量出不確定性。Claude Shannon提出以資訊熵\(H(X)\) (Shannon entropy)來量化不確定性，不確定性越高，熵也就越大。
-(註：熵一詞源自於熱力學，用以描述系統無序的程度，資訊熵和熱力學的熵二者在定義及概念下皆具有相似性。)
-(註：為何是以\(H\)作為代號，可參考資料[4]。)
-$$H(X) = - \sum_{x \in X} P(x)\ \log_{2}P(x)$$
-公式中的\(X\)包含了所有可能狀態的\(x\)。   擲一公平硬幣，正面、反面機率皆為\(\frac{1}{2}\)，對於 &ldquo;朝上的是哪一面？&rdquo; 這個問題的不確定性："><meta itemprop="datePublished" content="2020-11-09T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-11-09T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="215"><meta itemprop="image" content="">
-<meta itemprop="keywords" content="information theory," /><meta property="og:title" content="神經科學與資訊理論 - Part 1" />
-<meta property="og:description" content="筆者亦初識資訊理論(information theory)，若理解有誤也請不吝指教。本文內容大多源於〈A tutorial for information theory in neuroscience〉這篇回顧論文，此篇以較淺白方式介紹資訊理論及其於神經科學上之應用。若有興趣深入的讀者，不妨參閱經典教科書《Elements of Information Theory》[1]、交通大學陳伯寧老師開設之線上課程[2]、或其他參考資料[3]。 為何需要資訊理論？ 我們常常會聽到，神經系統負責整合感官接收到的訊息，經過中樞處理後，再送往下游產生相應動作；又或者是，神經元相接形成神經網路，訊息在神經元間傳遞，大腦得以對其進行編碼、運算、儲存等等。&ldquo;訊息&rdquo; 等類似辭彙雖頻繁出現，但其含義也十分模糊，我們如何描述神經元攜帶了多少訊息？兩神經元是否共享了某些訊息？此類問題顯然需要一個量化訊息的方式，而資訊理論正是合適之工具。 資訊理論的優點  無需依賴對應模型(model independent)：不需先假設目標結構(如：事先假設好神經群之間的連結關係，才進行分析)，具有更廣泛的應用場景。 可同時分析不同型態的資料，包含離散型和連續型資料，也有助於分析跨尺度的交互關係(如神經元層級 vs 腦區層級)：  離散型資料：如有無產生動作電位、實驗動物有無產生特定行為模式 連續型資料：如膜電位變化、螢光強度變化、實驗動物位置或速度   可偵測線性和非線性的交互關係 可用於多變量分析 一般而言，輸出的單位皆為bits (後文會加以介紹)，因此在不同實驗結果下比較會相對直觀(但並非可以直接比較)。   資訊理論的限制  無法建構描述系統如何運作的模型：
-如：分析結果得知，A與B共享了0.05 bits的資訊，但是我們無法更進一步知道A與B是否存在直接連結，即使有，也不知道是興奮性或抑制性連結。  話雖如此，仍能透過資訊理論排除不可能的模型，限縮尋找目標的範圍。 資訊熵 (Shannon Entropy) 首先，要得知訊息量多寡的方式，是這條訊息可以消除多少來自問題的不確定性(uncertainty)。
-例如這個問題：今天晚餐要吃什麼？
-A：都可以
-B：校外好遠，在校內吃就好
-C：吃小7
-很明顯的，訊息量C &gt; B &gt; A，又A的回答不具任何訊息量。
-因此，在測定訊息量之前，得先衡量出不確定性。Claude Shannon提出以資訊熵\(H(X)\) (Shannon entropy)來量化不確定性，不確定性越高，熵也就越大。
-(註：熵一詞源自於熱力學，用以描述系統無序的程度，資訊熵和熱力學的熵二者在定義及概念下皆具有相似性。)
-(註：為何是以\(H\)作為代號，可參考資料[4]。)
-$$H(X) = - \sum_{x \in X} P(x)\ \log_{2}P(x)$$
-公式中的\(X\)包含了所有可能狀態的\(x\)。   擲一公平硬幣，正面、反面機率皆為\(\frac{1}{2}\)，對於 &ldquo;朝上的是哪一面？&rdquo; 這個問題的不確定性：" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://PikaPei.github.io/blog/20201109-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part1/" /><meta property="og:image" content="" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2020-11-09T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-11-09T00:00:00&#43;00:00" />
-
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content=""/>
-
-<meta name="twitter:title" content="神經科學與資訊理論 - Part 1"/>
-<meta name="twitter:description" content="筆者亦初識資訊理論(information theory)，若理解有誤也請不吝指教。本文內容大多源於〈A tutorial for information theory in neuroscience〉這篇回顧論文，此篇以較淺白方式介紹資訊理論及其於神經科學上之應用。若有興趣深入的讀者，不妨參閱經典教科書《Elements of Information Theory》[1]、交通大學陳伯寧老師開設之線上課程[2]、或其他參考資料[3]。 為何需要資訊理論？ 我們常常會聽到，神經系統負責整合感官接收到的訊息，經過中樞處理後，再送往下游產生相應動作；又或者是，神經元相接形成神經網路，訊息在神經元間傳遞，大腦得以對其進行編碼、運算、儲存等等。&ldquo;訊息&rdquo; 等類似辭彙雖頻繁出現，但其含義也十分模糊，我們如何描述神經元攜帶了多少訊息？兩神經元是否共享了某些訊息？此類問題顯然需要一個量化訊息的方式，而資訊理論正是合適之工具。 資訊理論的優點  無需依賴對應模型(model independent)：不需先假設目標結構(如：事先假設好神經群之間的連結關係，才進行分析)，具有更廣泛的應用場景。 可同時分析不同型態的資料，包含離散型和連續型資料，也有助於分析跨尺度的交互關係(如神經元層級 vs 腦區層級)：  離散型資料：如有無產生動作電位、實驗動物有無產生特定行為模式 連續型資料：如膜電位變化、螢光強度變化、實驗動物位置或速度   可偵測線性和非線性的交互關係 可用於多變量分析 一般而言，輸出的單位皆為bits (後文會加以介紹)，因此在不同實驗結果下比較會相對直觀(但並非可以直接比較)。   資訊理論的限制  無法建構描述系統如何運作的模型：
-如：分析結果得知，A與B共享了0.05 bits的資訊，但是我們無法更進一步知道A與B是否存在直接連結，即使有，也不知道是興奮性或抑制性連結。  話雖如此，仍能透過資訊理論排除不可能的模型，限縮尋找目標的範圍。 資訊熵 (Shannon Entropy) 首先，要得知訊息量多寡的方式，是這條訊息可以消除多少來自問題的不確定性(uncertainty)。
-例如這個問題：今天晚餐要吃什麼？
-A：都可以
-B：校外好遠，在校內吃就好
-C：吃小7
-很明顯的，訊息量C &gt; B &gt; A，又A的回答不具任何訊息量。
-因此，在測定訊息量之前，得先衡量出不確定性。Claude Shannon提出以資訊熵\(H(X)\) (Shannon entropy)來量化不確定性，不確定性越高，熵也就越大。
-(註：熵一詞源自於熱力學，用以描述系統無序的程度，資訊熵和熱力學的熵二者在定義及概念下皆具有相似性。)
-(註：為何是以\(H\)作為代號，可參考資料[4]。)
-$$H(X) = - \sum_{x \in X} P(x)\ \log_{2}P(x)$$
-公式中的\(X\)包含了所有可能狀態的\(x\)。   擲一公平硬幣，正面、反面機率皆為\(\frac{1}{2}\)，對於 &ldquo;朝上的是哪一面？&rdquo; 這個問題的不確定性："/>
-<link rel="stylesheet" href="/css/bundle.min.7af44880fa8f2867fbbf1b1e6758774b791bf321699b23f84be69e26e842c64a.css" integrity="sha256-evRIgPqPKGf7vxseZ1h3S3kb8yFpmyP4S&#43;aeJuhCxko="><link rel="stylesheet" href="/css/add-on.css">
+<meta name="generator" content="Hugo 0.84.4" /><meta property="og:site_name" content="PikaPei&#39;s Website">
+  <meta property="og:title" content="神經科學與資訊理論 - Part 1">
+  <meta property="og:description" content="Pei&#39;s Personal Website">
+  <meta property="description" content="Pei&#39;s Personal Website">
+  <meta property="og:url" content="https://PikaPei.github.io/blog/20201109-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part1/">
+  <meta property="og:type" content="article">
+  
+    
+      <meta property="og:image" content="https://PikaPei.github.io/img/2020/1109/entropy.jpg">
+      <meta property="og:image:alt" content="Proposed Model">
+    
+  
+  <link rel="stylesheet" href="/css/bundle.min.9c2a75c4f520b5d59d87d4cf39ed10a4b84ec7d76e271aef0f42dde031110cd4.css" integrity="sha256-nCp1xPUgtdWdh9TPOe0QpLhOx9duJxrvD0Ld4DERDNQ="><link rel="stylesheet" href="/css/add-on.css">
 </head>
 
   <body>
@@ -85,19 +48,66 @@ $$H(X) = - \sum_{x \in X} P(x)\ \log_{2}P(x)$$
       
         
           
-          <a href="/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+          <a href="/about" class="nav link"><i class='far fa-id-card'></i> About</a>
         
       
-      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
       <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
     </menu>
     <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
-    
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
     
     <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
   </nav>
   <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
   
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=%e7%a5%9e%e7%b6%93%e7%a7%91%e5%ad%b8%e8%88%87%e8%b3%87%e8%a8%8a%e7%90%86%e8%ab%96%20-%20Part%201&amp;url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201109-%25E7%25A5%259E%25E7%25B6%2593%25E7%25A7%2591%25E5%25AD%25B8%25E8%2588%2587%25E8%25B3%2587%25E8%25A8%258A%25E7%2590%2586%25E8%25AB%2596-part1%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201109-%25E7%25A5%259E%25E7%25B6%2593%25E7%25A7%2591%25E5%25AD%25B8%25E8%2588%2587%25E8%25B3%2587%25E8%25A8%258A%25E7%2590%2586%25E8%25AB%2596-part1%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201109-%25E7%25A5%259E%25E7%25B6%2593%25E7%25A7%2591%25E5%25AD%25B8%25E8%2588%2587%25E8%25B3%2587%25E8%25A8%258A%25E7%2590%2586%25E8%25AB%2596-part1%2f&amp;title=%e7%a5%9e%e7%b6%93%e7%a7%91%e5%ad%b8%e8%88%87%e8%b3%87%e8%a8%8a%e7%90%86%e8%ab%96%20-%20Part%201" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201109-%25E7%25A5%259E%25E7%25B6%2593%25E7%25A7%2591%25E5%25AD%25B8%25E8%2588%2587%25E8%25B3%2587%25E8%25A8%258A%25E7%2590%2586%25E8%25AB%2596-part1%2f&amp;title=%e7%a5%9e%e7%b6%93%e7%a7%91%e5%ad%b8%e8%88%87%e8%b3%87%e8%a8%8a%e7%90%86%e8%ab%96%20-%20Part%201" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201109-%25E7%25A5%259E%25E7%25B6%2593%25E7%25A7%2591%25E5%25AD%25B8%25E8%2588%2587%25E8%25B3%2587%25E8%25A8%258A%25E7%2590%2586%25E8%25AB%2596-part1%2f&amp;description=%e7%a5%9e%e7%b6%93%e7%a7%91%e5%ad%b8%e8%88%87%e8%b3%87%e8%a8%8a%e7%90%86%e8%ab%96%20-%20Part%201" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Pei&amp;body=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201109-%25E7%25A5%259E%25E7%25B6%2593%25E7%25A7%2591%25E5%25AD%25B8%25E8%2588%2587%25E8%25B3%2587%25E8%25A8%258A%25E7%2590%2586%25E8%25AB%2596-part1%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
   
 </header>
 
@@ -163,8 +173,9 @@ $$H(X) = - \sum_{x \in X} P(x)\ \log_{2}P(x)$$
 
       <main id="site-main">
         
-  <article class="post">
-    <header>
+  <article>
+    <div class="post">
+      <header>
   <div class="title">
     
       <h2><a href="/blog/20201109-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part1/">神經科學與資訊理論 - Part 1</a></h2>
@@ -178,56 +189,56 @@ $$H(X) = - \sum_{x \in X} P(x)\ \log_{2}P(x)$$
   </div>
 </header>
 
-    <div id="socnet-share">
-      
+      <div id="socnet-share">
+        
 
 
 
 
   
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
+    
+    <a href="//twitter.com/share?text=%e7%a5%9e%e7%b6%93%e7%a7%91%e5%ad%b8%e8%88%87%e8%b3%87%e8%a8%8a%e7%90%86%e8%ab%96%20-%20Part%201&amp;url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201109-%25E7%25A5%259E%25E7%25B6%2593%25E7%25A7%2591%25E5%25AD%25B8%25E8%2588%2587%25E8%25B3%2587%25E8%25A8%258A%25E7%2590%2586%25E8%25AB%2596-part1%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
   
 
   
-  
-  
-  
-  
-
-  
-  
-  
-  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201109-%25E7%25A5%259E%25E7%25B6%2593%25E7%25A7%2591%25E5%25AD%25B8%25E8%2588%2587%25E8%25B3%2587%25E8%25A8%258A%25E7%2590%2586%25E8%25AB%2596-part1%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
   
 
   
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201109-%25E7%25A5%259E%25E7%25B6%2593%25E7%25A7%2591%25E5%25AD%25B8%25E8%2588%2587%25E8%25B3%2587%25E8%25A8%258A%25E7%2590%2586%25E8%25AB%2596-part1%2f&amp;title=%e7%a5%9e%e7%b6%93%e7%a7%91%e5%ad%b8%e8%88%87%e8%b3%87%e8%a8%8a%e7%90%86%e8%ab%96%20-%20Part%201" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
   
+
   
-  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201109-%25E7%25A5%259E%25E7%25B6%2593%25E7%25A7%2591%25E5%25AD%25B8%25E8%2588%2587%25E8%25B3%2587%25E8%25A8%258A%25E7%2590%2586%25E8%25AB%2596-part1%2f&amp;title=%e7%a5%9e%e7%b6%93%e7%a7%91%e5%ad%b8%e8%88%87%e8%b3%87%e8%a8%8a%e7%90%86%e8%ab%96%20-%20Part%201" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
   
 
   
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201109-%25E7%25A5%259E%25E7%25B6%2593%25E7%25A7%2591%25E5%25AD%25B8%25E8%2588%2587%25E8%25B3%2587%25E8%25A8%258A%25E7%2590%2586%25E8%25AB%2596-part1%2f&amp;description=%e7%a5%9e%e7%b6%93%e7%a7%91%e5%ad%b8%e8%88%87%e8%b3%87%e8%a8%8a%e7%90%86%e8%ab%96%20-%20Part%201" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
   
+
   
-  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Pei&amp;body=https%3a%2f%2fPikaPei.github.io%2fblog%2f20201109-%25E7%25A5%259E%25E7%25B6%2593%25E7%25A7%2591%25E5%25AD%25B8%25E8%2588%2587%25E8%25B3%2587%25E8%25A8%258A%25E7%2590%2586%25E8%25AB%2596-part1%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
   
 
 
-    </div>
-    <div class="content">
-      <a href="/blog/20201109-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part1/" class="image" style="--bg-image: url('https://PikaPei.github.io/img/2020/1109/entropy.jpg');">
+      </div>
+      <div class="content">
+        <a href="/blog/20201109-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part1/" class="image" style="--bg-image: url('https://PikaPei.github.io/img/2020/1109/entropy.jpg');">
     <img src="https://PikaPei.github.io/img/2020/1109/entropy.jpg" alt="Proposed Model">
   </a>
-      <p>筆者亦初識資訊理論(information theory)，若理解有誤也請不吝指教。本文內容大多源於〈A tutorial for information theory in neuroscience〉這篇回顧論文，此篇以較淺白方式介紹資訊理論及其於神經科學上之應用。若有興趣深入的讀者，不妨參閱經典教科書《Elements of Information Theory》[1]、交通大學陳伯寧老師開設之線上課程[2]、或其他參考資料[3]。
+        <p>筆者亦初識資訊理論(information theory)，若理解有誤也請不吝指教。本文內容大多源於〈A tutorial for information theory in neuroscience〉這篇回顧論文，此篇以較淺白方式介紹資訊理論及其於神經科學上之應用。若有興趣深入的讀者，不妨參閱經典教科書《Elements of Information Theory》[1]、交通大學陳伯寧老師開設之線上課程[2]、或其他參考資料[3]。
 <br><br></p>
 <h2 id="為何需要資訊理論">為何需要資訊理論？</h2>
 <p>我們常常會聽到，神經系統負責整合感官接收到的訊息，經過中樞處理後，再送往下游產生相應動作；又或者是，神經元相接形成神經網路，訊息在神經元間傳遞，大腦得以對其進行編碼、運算、儲存等等。&ldquo;訊息&rdquo; 等類似辭彙雖頻繁出現，但其含義也十分模糊，我們如何描述神經元攜帶了多少訊息？兩神經元是否共享了某些訊息？此類問題顯然需要一個量化訊息的方式，而資訊理論正是合適之工具。
@@ -285,9 +296,8 @@ C：吃小7<br>
 </li>
 </ul>
 <p>只有當各個狀態出現機率皆相同時，不確定性具有最大值(如Fig. 1 熵等於1 bit之處)；反之，若某一狀態出現機率為1，其他狀態就不可能發生，此時熵值為0，沒有不確定性(如Fig. 1 兩端)。</p>
-<p><figure>
-    <img src="/img/2020/1109/fig_1.png"
-         alt="Fig. 1. 兩狀態機率分布對應之資訊熵值"/> <figcaption>
+<p><figure><img src="/img/2020/1109/fig_1.png"
+         alt="Fig. 1. 兩狀態機率分布對應之資訊熵值"/><figcaption>
             <p>Fig. 1. 兩狀態機率分布對應之資訊熵值</p>
         </figcaption>
 </figure>
@@ -346,9 +356,9 @@ C：吃小7<br>
 <li><a href='https://math.stackexchange.com/questions/84719/why-is-h-used-for-entropy' target='_blank'>Why is &ldquo;h&rdquo; used for entropy?</a></li>
 </ol>
 
-    </div>
-    <footer>
-      <div class="stats">
+      </div>
+      <footer>
+        <div class="stats">
   
     <ul class="categories">
       
@@ -369,22 +379,23 @@ C：吃小7<br>
   
 </div>
 
-    </footer>
-  </article>
-  
+      </footer>
+    </div>
     
-  <article class="post">
+      
+  <div class='post'>
     
     <div>
-      <h2 id="say-something">Say Something</h2>
-        <form id="comment-form" class="new-comment" method="POST">
+      <h2 id='say-something'>Say Something</h2>
+        <form id='comment-form' class='new-comment' method='POST'>
           
           <h3 class='reply-notice hidden'>
             <span class='reply-name'></span>
+            <a class='reply-close-btn button'><i class='fas fa-times'></i></a>
           </h3>
 
           
-          <input type="hidden" name="options[entryId]" value="a75758aa2f6820e842c0c0ed14b23a92">
+          <input type='hidden' name='options[entryId]' value='a75758aa2f6820e842c0c0ed14b23a92'>
           <input type='hidden' name='fields[replyThread]' value=''>
           <input type='hidden' name='fields[replyID]' value=''>
           <input type='hidden' name='fields[replyName]' value=''>
@@ -405,21 +416,22 @@ C：吃小7<br>
           </div>
 
           
-          <input type='submit' value='Submit' class='button'>
-          <input type='submit' value='Submitted' class='hidden button' disabled>
-          <input type='reset' value='Reset' class='button'>
+          <button type='button' id="comment-form-submit" class='button'>Submit</button>
+          <button type='button' id="comment-form-submitted" class='hidden button' disabled>Submitted</button>
+          <button type='reset' id="comment-form-reset" class='button'>Reset</button>
         </form>
     </div>
 
     
-    <div>
+    <div class='comments-container'>
       <h2>Comments</h2><p>Nothing yet.</p>
       
     </div>
+  </div>
+
+
+    
   </article>
-
-
-  
   <div class="pagination">
     
       <a href="/blog/20210111-%E4%BA%BA%E9%A1%9E%E8%85%A6%E6%B3%A2%E8%88%87%E9%82%8A%E7%95%8C%E6%84%9F%E7%9F%A5/" class="button left"><span>人類腦波與邊界感知</span></a>
@@ -560,14 +572,14 @@ C：吃小7<br>
   <p class="copyright">
     © 2021 PikaPei&#39;s Website
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.81.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.84.4' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/js/highlight.js"></script>
     
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.1ac7a98b06451b2770fdaaee2f67721ab7e137a5fee8352dc78a33e7a69b3244.js" integrity="sha256-GsepiwZFGydw/aruL2dyGrfhN6X&#43;6DUtx4oz56abMkQ="></script>
+    <script>hljs.highlightAll();</script><script src="/js/bundle.min.e12d5faf9cdc55cc549dd52209d493a7c6888b245bd477642ab710f7303fc98c.js" integrity="sha256-4S1fr5zcVcxUndUiCdSTp8aIiyRb1HdkKrcQ9zA/yYw="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;
