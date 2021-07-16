@@ -6,7 +6,21 @@
     <description>Recent content in memory on PikaPei&#39;s Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://PikaPei.github.io/tags/memory/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://PikaPei.github.io/tags/memory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>識別熟悉面孔的「祖母神經群」</title>
+      <link>https://PikaPei.github.io/blog/20210711-%E8%AD%98%E5%88%A5%E7%86%9F%E6%82%89%E9%9D%A2%E5%AD%94%E7%9A%84%E7%A5%96%E6%AF%8D%E7%A5%9E%E7%B6%93%E7%BE%A4/</link>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://PikaPei.github.io/blog/20210711-%E8%AD%98%E5%88%A5%E7%86%9F%E6%82%89%E9%9D%A2%E5%AD%94%E7%9A%84%E7%A5%96%E6%AF%8D%E7%A5%9E%E7%B6%93%E7%BE%A4/</guid>
+      <description>先澄清，並沒有「祖母神經群」的說法。而是在1960年代時，由Jerome Lettvin提出的「祖母神經元」理論[1]，他提出這一顆神經元能夠辨認出祖母並喚醒相關記憶，若失去他，就再也認不得祖母了。換言之，這個理論認為一項事物或概念對應到一顆或一小群神經元，但此說法並沒有被廣泛支持。來自洛克菲勒大學 (Rockefeller University) 的研究團隊，發現一類位於TP (temporal pole, Fig. 1) 的神經元，能夠快速辨認出熟悉的臉，綜合了感覺細胞、記憶細胞的能力，就像是祖母神經元一樣，只是並非一顆神經元對應一張臉型，而是一群神經元一起運作，研究成果發表在 Science 期刊。
+ Fig. 1. 獼猴TP中的一塊區域可以識別熟悉獼猴臉 (Credit: Sofia Landi)[2]
+  實驗方法 研究人員插入電極記錄獼猴 TP和 AM (anterior-medial face area) 中的神經活性，並同時給獼猴看多種不同的相片，主要有彌猴臉、人臉、物品，再各自分成熟悉、不熟悉兩種，最後加上僅有獼猴身體沒有臉部、純灰色圖片，一共八組，每張相片呈現200毫秒。 實驗結果 見Fig. 2，上圖顯示神經元對每張相片的活性，而我們可以用下圖zScore來看總體的平均反應性。比較TP和AM，可以看出TP僅對熟悉的獼猴臉孔具有選擇性，熟悉的人臉、不熟悉的獼猴臉，所產生的反應都低了許多，AM則能夠識別所有的臉孔，無論是彌猴臉或是人臉。
+ Fig. 2. TP識別熟悉獼猴臉；AM廣泛識別臉型 (原論文 Fig. 2A、2B)
+  結語 此類識別熟悉臉孔的TP神經元，具有兩項特色：第一是具有快速處理視覺訊息的能力，因為在過去的研究中認為AM能夠快速識別臉部[3]，而這次的研究發現TP的反應時間與之沒有顯著差別；第二是具有記憶能力，因為他只對熟悉的臉產生反應，陌生的則否。在未來，作者也希望相關的研究可以幫助解決臉盲症患者的困境。 原始論文：
+Landi, S. M., Viswanathan, P., Serene, S. &amp;amp; Freiwald, W. A. A fast link between face perception and memory in the temporal pole. Science (2021) doi:10.1126/science.abi6671. 參考文章：</description>
+    </item>
+    
     <item>
       <title>記憶形成的分子機制</title>
       <link>https://PikaPei.github.io/blog/20201012-%E8%A8%98%E6%86%B6%E5%BD%A2%E6%88%90%E7%9A%84%E5%88%86%E5%AD%90%E6%A9%9F%E5%88%B6/</link>

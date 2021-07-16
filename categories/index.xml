@@ -8,9 +8,18 @@
     <language>en</language>
     <lastBuildDate>Sun, 11 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://PikaPei.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>memory</title>
+      <link>https://PikaPei.github.io/categories/memory/</link>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://PikaPei.github.io/categories/memory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>electrophysiology</title>
       <link>https://PikaPei.github.io/categories/electrophysiology/</link>
-      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://PikaPei.github.io/categories/electrophysiology/</guid>
       <description></description>
@@ -49,15 +58,6 @@
       <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://PikaPei.github.io/categories/information-theory/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>memory</title>
-      <link>https://PikaPei.github.io/categories/memory/</link>
-      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://PikaPei.github.io/categories/memory/</guid>
       <description></description>
     </item>
     
