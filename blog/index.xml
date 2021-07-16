@@ -6,7 +6,64 @@
     <description>Recent content in Blog on PikaPei&#39;s Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://PikaPei.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://PikaPei.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>識別熟悉面孔的「祖母神經群」</title>
+      <link>https://PikaPei.github.io/blog/20210711-%E8%AD%98%E5%88%A5%E7%86%9F%E6%82%89%E9%9D%A2%E5%AD%94%E7%9A%84%E7%A5%96%E6%AF%8D%E7%A5%9E%E7%B6%93%E7%BE%A4/</link>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://PikaPei.github.io/blog/20210711-%E8%AD%98%E5%88%A5%E7%86%9F%E6%82%89%E9%9D%A2%E5%AD%94%E7%9A%84%E7%A5%96%E6%AF%8D%E7%A5%9E%E7%B6%93%E7%BE%A4/</guid>
+      <description>先澄清，並沒有「祖母神經群」的說法。而是在1960年代時，由Jerome Lettvin提出的「祖母神經元」理論[1]，他提出這一顆神經元能夠辨認出祖母並喚醒相關記憶，若失去他，就再也認不得祖母了。換言之，這個理論認為一項事物或概念對應到一顆或一小群神經元，但此說法並沒有被廣泛支持。來自洛克菲勒大學 (Rockefeller University) 的研究團隊，發現一類位於TP (temporal pole, Fig. 1) 的神經元，能夠快速辨認出熟悉的臉，綜合了感覺細胞、記憶細胞的能力，就像是祖母神經元一樣，只是並非一顆神經元對應一張臉型，而是一群神經元一起運作，研究成果發表在 Science 期刊。
+ Fig. 1. 獼猴TP中的一塊區域可以識別熟悉獼猴臉 (Credit: Sofia Landi)[2]
+  實驗方法 研究人員插入電極記錄獼猴 TP和 AM (anterior-medial face area) 中的神經活性，並同時給獼猴看多種不同的相片，主要有彌猴臉、人臉、物品，再各自分成熟悉、不熟悉兩種，最後加上僅有獼猴身體沒有臉部、純灰色圖片，一共八組，每張相片呈現200毫秒。 實驗結果 見Fig. 2，上圖顯示神經元對每張相片的活性，而我們可以用下圖zScore來看總體的平均反應性。比較TP和AM，可以看出TP僅對熟悉的獼猴臉孔具有選擇性，熟悉的人臉、不熟悉的獼猴臉，所產生的反應都低了許多，AM則能夠識別所有的臉孔，無論是彌猴臉或是人臉。
+ Fig. 2. TP識別熟悉獼猴臉；AM廣泛識別臉型 (原論文 Fig. 2A、2B)
+  結語 此類識別熟悉臉孔的TP神經元，具有兩項特色：第一是具有快速處理視覺訊息的能力，因為在過去的研究中認為AM能夠快速識別臉部[3]，而這次的研究發現TP的反應時間與之沒有顯著差別；第二是具有記憶能力，因為他只對熟悉的臉產生反應，陌生的則否。在未來，作者也希望相關的研究可以幫助解決臉盲症患者的困境。 原始論文：
+Landi, S. M., Viswanathan, P., Serene, S. &amp;amp; Freiwald, W. A. A fast link between face perception and memory in the temporal pole. Science (2021) doi:10.1126/science.abi6671. 參考文章：</description>
+    </item>
+    
+    <item>
+      <title>人類神經元之多樣性</title>
+      <link>https://PikaPei.github.io/blog/20210519-%E4%BA%BA%E9%A1%9E%E7%A5%9E%E7%B6%93%E5%85%83%E4%B9%8B%E5%A4%9A%E6%A8%A3%E6%80%A7/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://PikaPei.github.io/blog/20210519-%E4%BA%BA%E9%A1%9E%E7%A5%9E%E7%B6%93%E5%85%83%E4%B9%8B%E5%A4%9A%E6%A8%A3%E6%80%A7/</guid>
+      <description>Dr. Taufik Valiante (論文通訊作者) 說：「此研究目的是為了揭露人類腦細胞為何能冠以『人類』之名，且探討神經迴路如何運作。」許多研究從大鼠、小鼠身上得到了大量知識，但和人類細胞相比終究存在差異，若想鑽研人的各種疾病、或建立電腦模型，能有最直接的資料再好不過。來自加拿大Krembil 腦科學研究所、Krembil 神經資訊中心、多倫多大學組成的研究團隊，以電生理方式紀錄從癲癇患者切除之腦片，結果展現了人類神經元豐富的多樣性，成果發表在 Nature Communications 期刊。 型態、特性大不同 從數十位患者切除後的腦片，約測量了兩百顆左右的神經元電生理資訊，主要有新皮質L2&amp;amp;3、L3c、L5三層的神經元。首先，從型態上來看，就算位於同一層之間，神經元的樣貌也各異其趣 (Fig. 1)。第二，測量閾值內、過閾值相關的電生理特性，發現到總體來說深層的神經元具有較高的可興奮性 (excitability)，但就像同層之間的神經元型態有很大的差異，電生理特性也具有多樣性，尤又以L5高一些。第三，不同層的神經元，對於不同頻率的電流輸入有不同響應，可能和層與層之間神經元互相溝通、或對於腦波韻律 (brain rhythms) 有重要的關聯性。
+ Fig. 1. 神經元型態多樣性 (原論文 Fig. 1a)
+  結語 因為取得人腦活組織的機會相當稀少，這份研究成為人類神經元資料庫的重要一員，但僅200多顆神經元，就呈現了龐大的多樣性。且看當今熱門的人工神經網路，每一顆神經特性都相同，只改變連結方式、權重大小，展現的功能就讓人們嘖嘖稱奇，人腦如何透過860億顆神經元多樣的性質、複雜的連結模式，不斷學習、保留記憶、產生意識，其中精巧之處更是令人著迷與讚嘆。 原始論文：
+Chameh, H. M. et al. Diversity amongst human cortical pyramidal neurons revealed via their sag currents and frequency preferences. Nat. Commun. 12, 2497 (2021) doi:10.1038/s41467-021-22741-9. 參考文章：
+ Researchers Identify Unique Characteristics of Human Neurons  </description>
+    </item>
+    
+    <item>
+      <title>Fruit Fly Brain Observatory (FFBO) - 果蠅大腦觀測站</title>
+      <link>https://PikaPei.github.io/blog/20210419-fruit-fly-brain-observatory/</link>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://PikaPei.github.io/blog/20210419-fruit-fly-brain-observatory/</guid>
+      <description>果蠅為重要的模式生物，果蠅腦具有約10萬顆神經元，相較於人腦、鼠腦，是相對容易處理的數量級，同時果蠅也能表現出複雜行為，再加上豐富的基因工具，果蠅一直是神經科學家的寵兒。在各個團隊的努力之下，已經產生大量的果蠅神經元數據，許多也早已公開讓大家取用，只是來源不同，就會有不同的介面，穿梭於各個網站並學習如何使用，無疑消耗了一些時間。來自哥倫比亞大學的團隊，以果蠅大腦觀測站(Fruit Fly Brain Observatory, FFBO)為名[1]，發展了一系列輔助工具，並整合多個重要的資料集，讓使用者不必再花額外時間學習操作個別的資料庫，而是走入一扇大門，就直接通向了每一個寶貴資料庫。 Brain Maps Visualizers (BrainMapsViz) 最直接使用FFBO的方式是透過網站版本的神經可視化工具 BrainMapsViz (Fig. 1) [2]。此工具強調藉由NeuroNLP的處理，使用者以簡單英文指令，就能夠顯示目標神經，例如在右下角輸入 &amp;ldquo;show local neurons in EB&amp;rdquo;，就會產生 Fig. 2 的結果，網站內也提供了指令說明和多個範例供使用者參考。
+這邊展示使用的是FlyCircuit資料集，除此之外，FFBO也囊括了Hemibrain、L1EM Larva、Medulla 7 Column等資料集，可以在進入BrainMapsViz時選取，但可以用一樣的指令操作！
+ Fig. 1. BrainMapsViz (FiyCircuit dataset)
+   Fig. 2. &amp;ldquo;show local neurons in EB&amp;rdquo; 返回結果
+  FlyBrainLab 進階的使用方式，需要安裝flybrainlab套件，再以Jupyter Lab開啟 (Fig. 3)，使用者要有一些Python程基礎。
+有了此套件，使用者一樣可以簡單英文指令顯示神經，還能夠取得各個資料集的神經元資料並進行分析、建立可交互式迴路圖、進行神經網路模擬等等。Lazar et al. (2021) 中介紹了六個使用場景[3]，另外，FlyBrainLab github [4] 也提供了入門範例。
+ Fig. 3. FlyBrainLab 使用者介面 (Credit: Lazar et al. (2021) Fig. 2b)</description>
+    </item>
+    
+    <item>
+      <title>抑制致穩網路 (Inhibition-Stabilized Network)</title>
+      <link>https://PikaPei.github.io/blog/20210225-%E6%8A%91%E5%88%B6%E8%87%B4%E7%A9%A9%E7%B6%B2%E8%B7%AF/</link>
+      <pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://PikaPei.github.io/blog/20210225-%E6%8A%91%E5%88%B6%E8%87%B4%E7%A9%A9%E7%B6%B2%E8%B7%AF/</guid>
+      <description>神經透過相互連接形成網路，並肩負起各式各樣的功能。其中，先不論神經自身的多樣性和可塑性(plasticity)，僅僅藉由&amp;quot;網路如何連結&amp;quot;、&amp;ldquo;連結強度變化&amp;quot;兩個條件，就能讓系統產生各種特性。
+從&amp;quot;網路如何連結&amp;quot;的角度來看，主要可分為二種，分別是前饋網路(feedforward network)和回饋網路(recurrent network)。前者將訊號一步一步由前向後傳送，而後者除了層層遞進的訊號外，更可進一步將後面的訊號往前送。由於結構的不同，許多研究已指出回饋網路能比前饋網路完成更多任務。
+即使在回饋網路中，連結強度不同也會導致不同特性。在高增益興奮性網路中(high-gain excitatory network)，興奮性神經元(excitatory neuron)間以較強的連結互相刺激，可以使系統快速反應外部刺激、放大訊號、維持神經活性。但強連結帶來的反效果是使得網路不穩定，易在神經相互刺激下，造成活性失控(runaway activity)，或稱為癲癇態(epileptic mode)。
+為了避免在強連結回饋網路中的活性失控，回饋抑制(recurrent inhibition)成為不可或缺的要素，藉此可使整個網路在穩定的範圍內運作，這樣的網路即為抑制致穩網路。 抑制致穩網路特性 - 反直覺效應 (Paradoxical Effect) Fig. 1中，有三種網路結構，分別是前饋網路(Fig. 1a)、回饋抑制網路(Fig. 1b)、抑制致穩網路(Fig. 1c)。讓我們直接看Fig. 1c中間的圖(Network response)，最左側的部分(Exc only)，網路忽略掉抑制性神經元，只留下強連結的興奮性回饋，此時接收到刺激就容易發生活性失控。中間部分(Exc + Inh)，加入抑制性神經元後，可減弱興奮性神經元的活性，穩定此網路。最右側的部分(Inh perturbation)，則是額外輸入刺激在抑制性神經元上，一開始抑制性神經元活性會提高，使興奮性神經元活性受抑制而下降，進而導致輸出降低，最終結果顯示出：抑制性神經元受到刺激，活性反而減弱，反之，若給予抑制性神經元負電流，最後活性反而會上升，此即為抑制致穩網路的反直覺效應，而這樣的特性被認爲可用來偵測抑制致穩網路之存在。
+ Fig. 1. 抑制致穩網路呈現反直覺效應 (原論文Fig. 1)
+  實驗證據 一個可能是抑制致穩網路的證據來自海馬迴的theta波模型。在此模型中，若抑制海馬迴中的抑制性神經元(模擬來自medial septum的輸入)，預期會使抑制性神經元有最低活性，同時海馬迴中的興奮性神經元有最高活性，呈現出反相位(out-of-phase)。但模擬結果卻是興奮性神經元、抑制性神經元處於同相位(in-phase)，並且在大鼠實驗中也看到相似的情形，顯示此處神經可能組成抑制致穩網路。 結語 已有研究表明抑制致穩網路廣泛地出現在大腦皮質中，也有愈來愈多的計算模型去解釋並預測抑制致穩網路的運作，但尚有許多未解之謎，藉由嶄新的科技，科學家已經能更精確的操控神經，期待未來在實驗和理論的相輔相成之下，我們能夠了解抑制致穩網路的運作，以及其失去功能下造成的影響和疾病。 原始論文：
+Sadeh, S. &amp;amp; Clopath, C. Inhibitory stabilization and cortical computation. Nat. Rev. Neurosci. 22, 21–37 (2021) doi:10.1038/s41583-020-00390-z.</description>
+    </item>
+    
     <item>
       <title>人類腦波與邊界感知</title>
       <link>https://PikaPei.github.io/blog/20210111-%E4%BA%BA%E9%A1%9E%E8%85%A6%E6%B3%A2%E8%88%87%E9%82%8A%E7%95%8C%E6%84%9F%E7%9F%A5/</link>

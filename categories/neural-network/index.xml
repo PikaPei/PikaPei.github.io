@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>neural network on PikaPei&#39;s Website</title>
+    <link>https://PikaPei.github.io/categories/neural-network/</link>
+    <description>Recent content in neural network on PikaPei&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 25 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://PikaPei.github.io/categories/neural-network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>抑制致穩網路 (Inhibition-Stabilized Network)</title>
+      <link>https://PikaPei.github.io/blog/20210225-%E6%8A%91%E5%88%B6%E8%87%B4%E7%A9%A9%E7%B6%B2%E8%B7%AF/</link>
+      <pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://PikaPei.github.io/blog/20210225-%E6%8A%91%E5%88%B6%E8%87%B4%E7%A9%A9%E7%B6%B2%E8%B7%AF/</guid>
+      <description>神經透過相互連接形成網路，並肩負起各式各樣的功能。其中，先不論神經自身的多樣性和可塑性(plasticity)，僅僅藉由&amp;quot;網路如何連結&amp;quot;、&amp;ldquo;連結強度變化&amp;quot;兩個條件，就能讓系統產生各種特性。
+從&amp;quot;網路如何連結&amp;quot;的角度來看，主要可分為二種，分別是前饋網路(feedforward network)和回饋網路(recurrent network)。前者將訊號一步一步由前向後傳送，而後者除了層層遞進的訊號外，更可進一步將後面的訊號往前送。由於結構的不同，許多研究已指出回饋網路能比前饋網路完成更多任務。
+即使在回饋網路中，連結強度不同也會導致不同特性。在高增益興奮性網路中(high-gain excitatory network)，興奮性神經元(excitatory neuron)間以較強的連結互相刺激，可以使系統快速反應外部刺激、放大訊號、維持神經活性。但強連結帶來的反效果是使得網路不穩定，易在神經相互刺激下，造成活性失控(runaway activity)，或稱為癲癇態(epileptic mode)。
+為了避免在強連結回饋網路中的活性失控，回饋抑制(recurrent inhibition)成為不可或缺的要素，藉此可使整個網路在穩定的範圍內運作，這樣的網路即為抑制致穩網路。 抑制致穩網路特性 - 反直覺效應 (Paradoxical Effect) Fig. 1中，有三種網路結構，分別是前饋網路(Fig. 1a)、回饋抑制網路(Fig. 1b)、抑制致穩網路(Fig. 1c)。讓我們直接看Fig. 1c中間的圖(Network response)，最左側的部分(Exc only)，網路忽略掉抑制性神經元，只留下強連結的興奮性回饋，此時接收到刺激就容易發生活性失控。中間部分(Exc + Inh)，加入抑制性神經元後，可減弱興奮性神經元的活性，穩定此網路。最右側的部分(Inh perturbation)，則是額外輸入刺激在抑制性神經元上，一開始抑制性神經元活性會提高，使興奮性神經元活性受抑制而下降，進而導致輸出降低，最終結果顯示出：抑制性神經元受到刺激，活性反而減弱，反之，若給予抑制性神經元負電流，最後活性反而會上升，此即為抑制致穩網路的反直覺效應，而這樣的特性被認爲可用來偵測抑制致穩網路之存在。
+ Fig. 1. 抑制致穩網路呈現反直覺效應 (原論文Fig. 1)
+  實驗證據 一個可能是抑制致穩網路的證據來自海馬迴的theta波模型。在此模型中，若抑制海馬迴中的抑制性神經元(模擬來自medial septum的輸入)，預期會使抑制性神經元有最低活性，同時海馬迴中的興奮性神經元有最高活性，呈現出反相位(out-of-phase)。但模擬結果卻是興奮性神經元、抑制性神經元處於同相位(in-phase)，並且在大鼠實驗中也看到相似的情形，顯示此處神經可能組成抑制致穩網路。 結語 已有研究表明抑制致穩網路廣泛地出現在大腦皮質中，也有愈來愈多的計算模型去解釋並預測抑制致穩網路的運作，但尚有許多未解之謎，藉由嶄新的科技，科學家已經能更精確的操控神經，期待未來在實驗和理論的相輔相成之下，我們能夠了解抑制致穩網路的運作，以及其失去功能下造成的影響和疾病。 原始論文：
+Sadeh, S. &amp;amp; Clopath, C. Inhibitory stabilization and cortical computation. Nat. Rev. Neurosci. 22, 21–37 (2021) doi:10.1038/s41583-020-00390-z.</description>
+    </item>
+    
+  </channel>
+</rss>

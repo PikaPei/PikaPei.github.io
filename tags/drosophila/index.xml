@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drosophila on PikaPei&#39;s Website</title>
+    <link>https://PikaPei.github.io/tags/drosophila/</link>
+    <description>Recent content in Drosophila on PikaPei&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 19 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://PikaPei.github.io/tags/drosophila/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fruit Fly Brain Observatory (FFBO) - 果蠅大腦觀測站</title>
+      <link>https://PikaPei.github.io/blog/20210419-fruit-fly-brain-observatory/</link>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://PikaPei.github.io/blog/20210419-fruit-fly-brain-observatory/</guid>
+      <description>果蠅為重要的模式生物，果蠅腦具有約10萬顆神經元，相較於人腦、鼠腦，是相對容易處理的數量級，同時果蠅也能表現出複雜行為，再加上豐富的基因工具，果蠅一直是神經科學家的寵兒。在各個團隊的努力之下，已經產生大量的果蠅神經元數據，許多也早已公開讓大家取用，只是來源不同，就會有不同的介面，穿梭於各個網站並學習如何使用，無疑消耗了一些時間。來自哥倫比亞大學的團隊，以果蠅大腦觀測站(Fruit Fly Brain Observatory, FFBO)為名[1]，發展了一系列輔助工具，並整合多個重要的資料集，讓使用者不必再花額外時間學習操作個別的資料庫，而是走入一扇大門，就直接通向了每一個寶貴資料庫。 Brain Maps Visualizers (BrainMapsViz) 最直接使用FFBO的方式是透過網站版本的神經可視化工具 BrainMapsViz (Fig. 1) [2]。此工具強調藉由NeuroNLP的處理，使用者以簡單英文指令，就能夠顯示目標神經，例如在右下角輸入 &amp;ldquo;show local neurons in EB&amp;rdquo;，就會產生 Fig. 2 的結果，網站內也提供了指令說明和多個範例供使用者參考。
+這邊展示使用的是FlyCircuit資料集，除此之外，FFBO也囊括了Hemibrain、L1EM Larva、Medulla 7 Column等資料集，可以在進入BrainMapsViz時選取，但可以用一樣的指令操作！
+ Fig. 1. BrainMapsViz (FiyCircuit dataset)
+   Fig. 2. &amp;ldquo;show local neurons in EB&amp;rdquo; 返回結果
+  FlyBrainLab 進階的使用方式，需要安裝flybrainlab套件，再以Jupyter Lab開啟 (Fig. 3)，使用者要有一些Python程基礎。
+有了此套件，使用者一樣可以簡單英文指令顯示神經，還能夠取得各個資料集的神經元資料並進行分析、建立可交互式迴路圖、進行神經網路模擬等等。Lazar et al. (2021) 中介紹了六個使用場景[3]，另外，FlyBrainLab github [4] 也提供了入門範例。
+ Fig. 3. FlyBrainLab 使用者介面 (Credit: Lazar et al. (2021) Fig. 2b)</description>
+    </item>
+    
+  </channel>
+</rss>

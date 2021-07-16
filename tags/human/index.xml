@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>human on PikaPei&#39;s Website</title>
+    <link>https://PikaPei.github.io/tags/human/</link>
+    <description>Recent content in human on PikaPei&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 11 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://PikaPei.github.io/tags/human/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>識別熟悉面孔的「祖母神經群」</title>
+      <link>https://PikaPei.github.io/blog/20210711-%E8%AD%98%E5%88%A5%E7%86%9F%E6%82%89%E9%9D%A2%E5%AD%94%E7%9A%84%E7%A5%96%E6%AF%8D%E7%A5%9E%E7%B6%93%E7%BE%A4/</link>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://PikaPei.github.io/blog/20210711-%E8%AD%98%E5%88%A5%E7%86%9F%E6%82%89%E9%9D%A2%E5%AD%94%E7%9A%84%E7%A5%96%E6%AF%8D%E7%A5%9E%E7%B6%93%E7%BE%A4/</guid>
+      <description>先澄清，並沒有「祖母神經群」的說法。而是在1960年代時，由Jerome Lettvin提出的「祖母神經元」理論[1]，他提出這一顆神經元能夠辨認出祖母並喚醒相關記憶，若失去他，就再也認不得祖母了。換言之，這個理論認為一項事物或概念對應到一顆或一小群神經元，但此說法並沒有被廣泛支持。來自洛克菲勒大學 (Rockefeller University) 的研究團隊，發現一類位於TP (temporal pole, Fig. 1) 的神經元，能夠快速辨認出熟悉的臉，綜合了感覺細胞、記憶細胞的能力，就像是祖母神經元一樣，只是並非一顆神經元對應一張臉型，而是一群神經元一起運作，研究成果發表在 Science 期刊。
+ Fig. 1. 獼猴TP中的一塊區域可以識別熟悉獼猴臉 (Credit: Sofia Landi)[2]
+  實驗方法 研究人員插入電極記錄獼猴 TP和 AM (anterior-medial face area) 中的神經活性，並同時給獼猴看多種不同的相片，主要有彌猴臉、人臉、物品，再各自分成熟悉、不熟悉兩種，最後加上僅有獼猴身體沒有臉部、純灰色圖片，一共八組，每張相片呈現200毫秒。 實驗結果 見Fig. 2，上圖顯示神經元對每張相片的活性，而我們可以用下圖zScore來看總體的平均反應性。比較TP和AM，可以看出TP僅對熟悉的獼猴臉孔具有選擇性，熟悉的人臉、不熟悉的獼猴臉，所產生的反應都低了許多，AM則能夠識別所有的臉孔，無論是彌猴臉或是人臉。
+ Fig. 2. TP識別熟悉獼猴臉；AM廣泛識別臉型 (原論文 Fig. 2A、2B)
+  結語 此類識別熟悉臉孔的TP神經元，具有兩項特色：第一是具有快速處理視覺訊息的能力，因為在過去的研究中認為AM能夠快速識別臉部[3]，而這次的研究發現TP的反應時間與之沒有顯著差別；第二是具有記憶能力，因為他只對熟悉的臉產生反應，陌生的則否。在未來，作者也希望相關的研究可以幫助解決臉盲症患者的困境。 原始論文：
+Landi, S. M., Viswanathan, P., Serene, S. &amp;amp; Freiwald, W. A. A fast link between face perception and memory in the temporal pole. Science (2021) doi:10.1126/science.abi6671. 參考文章：</description>
+    </item>
+    
+    <item>
+      <title>人類神經元之多樣性</title>
+      <link>https://PikaPei.github.io/blog/20210519-%E4%BA%BA%E9%A1%9E%E7%A5%9E%E7%B6%93%E5%85%83%E4%B9%8B%E5%A4%9A%E6%A8%A3%E6%80%A7/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://PikaPei.github.io/blog/20210519-%E4%BA%BA%E9%A1%9E%E7%A5%9E%E7%B6%93%E5%85%83%E4%B9%8B%E5%A4%9A%E6%A8%A3%E6%80%A7/</guid>
+      <description>Dr. Taufik Valiante (論文通訊作者) 說：「此研究目的是為了揭露人類腦細胞為何能冠以『人類』之名，且探討神經迴路如何運作。」許多研究從大鼠、小鼠身上得到了大量知識，但和人類細胞相比終究存在差異，若想鑽研人的各種疾病、或建立電腦模型，能有最直接的資料再好不過。來自加拿大Krembil 腦科學研究所、Krembil 神經資訊中心、多倫多大學組成的研究團隊，以電生理方式紀錄從癲癇患者切除之腦片，結果展現了人類神經元豐富的多樣性，成果發表在 Nature Communications 期刊。 型態、特性大不同 從數十位患者切除後的腦片，約測量了兩百顆左右的神經元電生理資訊，主要有新皮質L2&amp;amp;3、L3c、L5三層的神經元。首先，從型態上來看，就算位於同一層之間，神經元的樣貌也各異其趣 (Fig. 1)。第二，測量閾值內、過閾值相關的電生理特性，發現到總體來說深層的神經元具有較高的可興奮性 (excitability)，但就像同層之間的神經元型態有很大的差異，電生理特性也具有多樣性，尤又以L5高一些。第三，不同層的神經元，對於不同頻率的電流輸入有不同響應，可能和層與層之間神經元互相溝通、或對於腦波韻律 (brain rhythms) 有重要的關聯性。
+ Fig. 1. 神經元型態多樣性 (原論文 Fig. 1a)
+  結語 因為取得人腦活組織的機會相當稀少，這份研究成為人類神經元資料庫的重要一員，但僅200多顆神經元，就呈現了龐大的多樣性。且看當今熱門的人工神經網路，每一顆神經特性都相同，只改變連結方式、權重大小，展現的功能就讓人們嘖嘖稱奇，人腦如何透過860億顆神經元多樣的性質、複雜的連結模式，不斷學習、保留記憶、產生意識，其中精巧之處更是令人著迷與讚嘆。 原始論文：
+Chameh, H. M. et al. Diversity amongst human cortical pyramidal neurons revealed via their sag currents and frequency preferences. Nat. Commun. 12, 2497 (2021) doi:10.1038/s41467-021-22741-9. 參考文章：
+ Researchers Identify Unique Characteristics of Human Neurons  </description>
+    </item>
+    
+  </channel>
+</rss>
