@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>courtship on PikaPei&#39;s Website</title>
+    <link>https://PikaPei.github.io/tags/courtship/</link>
+    <description>Recent content in courtship on PikaPei&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://PikaPei.github.io/tags/courtship/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>果蠅求偶行為的調控機制</title>
+      <link>https://PikaPei.github.io/blog/20210815-%E6%9E%9C%E8%A0%85%E6%B1%82%E5%81%B6%E8%A1%8C%E7%82%BA%E7%9A%84%E8%AA%BF%E6%8E%A7%E6%A9%9F%E5%88%B6/</link>
+      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://PikaPei.github.io/blog/20210815-%E6%9E%9C%E8%A0%85%E6%B1%82%E5%81%B6%E8%A1%8C%E7%82%BA%E7%9A%84%E8%AA%BF%E6%8E%A7%E6%A9%9F%E5%88%B6/</guid>
+      <description>當雄果蠅未處於求偶狀態時，就算雌果蠅在附近也無動於衷，一旦進入求偶狀態，雄果蠅則會積極地追逐雌果蠅，並揮舞單邊翅膀，科學家描述這是首「求偶之歌」[1]。同樣看見雌果蠅，卻表現出兩種不同的行為，代表果蠅大腦有著不一樣的內在狀態，過去的研究中發現，活化P1神經元能夠讓果蠅進入性喚起狀態 (sexual arousal state)，展現出求偶行為。而此篇來自洛克菲勒大學的研究更發現了P1神經元會調控LC10a視覺神經迴路，因此即使接收到相似的視覺訊號，求偶行為也會受到當下P1神經元的活性高低而影響，研究成果發表在 Nature 期刊。 對虛擬果蠅展現求偶行為 過去研究中有個有趣的發現，在求偶狀態下的果蠅，就算不是對真實果蠅，也會表現出求偶行為。因此，研究團隊將雄果蠅置於一個環型螢幕中，以黑色圓球代表虛擬雌果蠅，透過圓球的左右移動、放大縮小，可以模擬虛擬果蠅的行走軌跡，同時分析雄果蠅腳下浮球的轉動，也可以得到雄果蠅移動軌跡 (Fig. 1)。
+見 Fig. 2.，以光遺傳學法刺激P1神經元，誘發果蠅進入性喚起狀態，可以清楚看見雄果蠅表現求偶行為，追逐著虛擬果蠅。除了直接刺激之外，自然狀況下，雄果蠅會接收到雌果蠅的費洛蒙，活化P1神經元，但先前研究發現，費洛蒙並不是必要元素，因此在這個研究中，讓圓球移動軌跡足夠像真實的果蠅 (Fig. 3)，也可以成功活化P1神經元！
+ Fig. 1. 實驗裝置 (原論文 Fig. 1a)
+   Fig. 2. 以光遺傳學方法驅動果蠅進入求偶狀態 (原論文 Fig. 1b)
+   Fig. 3. 模擬真實果蠅軌跡 (原論文 Extended Data Fig. 4j)
+  P1神經元調控LC10a神經元 為了證明P1、LC10a神經活性與求偶行為的關聯性，研究團隊同時記錄這些神經的螢光變化，並且用前述模擬真實果蠅軌跡的方式，讓雄果蠅進入性喚起狀態。
+見 Fig. 4，黑線 (Target angle) 代表圓球水平移動的角度，可以想像成在螢幕上順時鐘、逆時鐘游移，約在20s的地方圓球開始移動，雄果蠅也開始表現出求偶行為，可以從 Fig. 4 最下方頭轉動的速度圖 (ΔHeading) 看出追逐著圓球的樣子，正/負值分別代表向右/左轉。
+Fig. 4 中間兩條螢光變化曲線 (ΔF / F0) 則分別代表P1和LC10a神經元的活性 (此處僅呈現單側的LC10a，因此可看到LC10a活性會和頭轉動一樣表現出震盪)。主要有兩個重點：(1) P1、LC10a活性呈正相關。(2) P1的活性影響了求偶行為的表現強度，例如中間約70s之處，P1活性相當低，果蠅頭轉向的幅度也比較小，或幾乎沒有動作，值得注意的是，圓球如常往復運動，代表傳入的視覺訊息不變，但此時LC10a的活性受P1調控而處於相對低點。
+ Fig. 4. P1神經元、LC10a神經元活性變化具相關性 (原論文 Fig.</description>
+    </item>
+    
+  </channel>
+</rss>

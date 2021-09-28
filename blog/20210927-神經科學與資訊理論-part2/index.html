@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+<head>
+  <meta charset="utf-8">
+<title>神經科學與資訊理論 - Part 2 - PikaPei&#39;s Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="generator" content="Hugo 0.88.1" /><meta property="og:site_name" content="PikaPei&#39;s Website">
+  <meta property="og:title" content="神經科學與資訊理論 - Part 2">
+  <meta property="og:description" content="Pei&#39;s Personal Website">
+  <meta property="description" content="Pei&#39;s Personal Website">
+  <meta property="og:url" content="https://PikaPei.github.io/blog/20210927-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part2/">
+  <meta property="og:type" content="article">
+  
+    
+      <meta property="og:image" content="https://PikaPei.github.io/img/2021/0927/entropy.jpg">
+      <meta property="og:image:alt" content="Proposed Model">
+    
+  
+  <link rel="stylesheet" href="/css/bundle.min.9c2a75c4f520b5d59d87d4cf39ed10a4b84ec7d76e271aef0f42dde031110cd4.css" integrity="sha256-nCp1xPUgtdWdh9TPOe0QpLhOx9duJxrvD0Ld4DERDNQ="><link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/" class="nav">
+        
+          PikaPei
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/about" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+      
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    
+    
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="https://PikaPei.github.io/img/main/pika_logo.jpg" class="circle" width="100" alt="Hugo Future Imperfect Slim" /></a>
+  <header>
+    <h1>PikaPei</h1>
+  </header>
+  <main>
+    <p>Research Assistant in <a href='http://life.nthu.edu.tw/~lablcc/index_ch.html' target='_blank'>CCLo's Lab</a></p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+        <li><a href="//github.com/PikaPei" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article>
+    <div class="post">
+      <header>
+  <div class="title">
+    
+      <h2><a href="/blog/20210927-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part2/">神經科學與資訊理論 - Part 2</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time datetime="2021-09-27 00:00:00 &#43;0000 UTC">September 27, 2021</time>
+    <p>Pei</p>
+    
+  </div>
+</header>
+
+      <div id="socnet-share">
+        
+
+
+
+
+
+      </div>
+      <div class="content">
+        <a href="/blog/20210927-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part2/" class="image" style="--bg-image: url('https://PikaPei.github.io/img/2021/0927/entropy.jpg');">
+    <img src="https://PikaPei.github.io/img/2021/0927/entropy.jpg" alt="Proposed Model">
+  </a>
+        <p><a href='https://pikapei.github.io/blog/20201109-神經科學與資訊理論-part1/' target='_blank'><strong>神經科學與資訊理論 - Part 1</strong></a><br>
+前文中提及了不確定性與資訊熵的概念，但仍侷限在只有一個變數的情況，這篇文章將從一個變數增加至兩個變數，介紹聯合熵、條件熵，最後引入相互資訊和不確定性的關係。
+<br><br></p>
+<h2 id="聯合熵-joint-entropy">聯合熵 (Joint Entropy)</h2>
+<p>若是系統含有多於一個以上的變數，使用聯合熵：</p>
+<p>$$H(X,Y) = - \sum_{x \in X,y \in Y} P(x,y)\ \log_{2} P(x,y)$$</p>
+<ul>
+<li>
+<p>丟擲一枚硬幣，並且從黑桃、紅心、方塊、梅花四張A中任抽一張，會有以下八種組合，機率各1/8。<br>
+\(X=\{正面,反面\}\)<br>
+\(Y=\{黑桃,紅心,方塊,梅花\}\)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">黑桃</th>
+<th style="text-align:center">紅心</th>
+<th style="text-align:center">方塊</th>
+<th style="text-align:center">梅花</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">正面</td>
+<td style="text-align:center">1/8</td>
+<td style="text-align:center">1/8</td>
+<td style="text-align:center">1/8</td>
+<td style="text-align:center">1/8</td>
+</tr>
+<tr>
+<td style="text-align:center">反面</td>
+<td style="text-align:center">1/8</td>
+<td style="text-align:center">1/8</td>
+<td style="text-align:center">1/8</td>
+<td style="text-align:center">1/8</td>
+</tr>
+</tbody>
+</table>
+<p>$$
+\begin{aligned}
+H(X,Y) &amp;= - \sum_{\substack{x \in {heads,tails} \\ y \in {spades,hearts,diamonds,clubs}}} P(x,y)\ \log_{2} P(x,y) \\ &amp;= 8\cdot-[\frac{1}{8} \log_2(\frac{1}{8}) ] = 3
+\end{aligned}
+$$</p>
+<p>聯合熵為3 bit，可以理解成用3個是非題得知最終狀態，例如：是正面嗎 → 是黑色的牌嗎 → 是黑桃嗎。
+<br><br></p>
+</li>
+</ul>
+<p>當X、Y兩變數是獨立的時候(如前例，丟擲硬幣和抽撲克牌並不會互相影響)，\(P(x,y)=P(x)P(y)\)，此時的聯合熵為兩變數各自的資訊熵之和。
+$$
+\begin{aligned}
+H_{independent}(X,Y) &amp;= - \sum_{x \in X,y \in Y} P(x,y)\ \log_{2} P(x,y) \\ &amp;= - \sum_{x \in X,y \in Y} P(x)P(y)\ \log_{2}[P(x)P(y)] \\ &amp;= - \sum_{x \in X,y \in Y} P(x)P(y)\ [\log_{2} P(x) + \log_{2} P(y)] \\ &amp;= - \sum_{x \in X,y \in Y} P(x)P(y)\ \log_{2} P(x) - \sum_{x \in X,y \in Y} P(x)P(y)\ \log_{2} P(y) \\ &amp;\qquad (\because \sum_{x \in X} P(x) = 1) \\ &amp;= - \sum_{x \in X} P(x)\ \log_{2} P(x) - \sum_{y \in Y} P(y)\ \log_{2} P(y) \\ &amp;= H(X) + H(Y)
+\end{aligned}
+$$</p>
+<ul>
+<li>如前例 (丟擲一枚硬幣和抽一張撲克牌)：
+$$
+\begin{aligned}
+H_{independent}(X,Y) &amp;= H(X) + H(Y) \\ &amp;= 1+2 \\ &amp;= 3
+\end{aligned}
+$$
+<br><br></li>
+</ul>
+<h2 id="條件熵-conditional-entropy">條件熵 (Conditional Entropy)</h2>
+<p>條件熵計算的是，當已經知道一個變數的狀態時，整個系統的平均不確定性為何。</p>
+<p>$$H(X \mid Y) = - \sum_{x \in X,y \in Y} P(x,y)\ \log_{2} P(x \mid y)$$</p>
+<ul>
+<li>
+<p>再一次使用前面的例子，但這次我們先抽出並翻開一張牌，也就是說在知道花色的情況下，計算擲硬幣的資訊熵。
+$$
+\begin{aligned}
+H(X \mid Y) &amp;= - \sum_{\substack{x \in {heads,tails} \\ y \in {spades,hearts,diamonds,clubs}}} P(x,y)\ \log_{2} P(x \mid y) \\ &amp;= 8\cdot-[\frac{1}{8} \log_2(\frac{1}{2}) ] = 1
+\end{aligned}
+$$</p>
+<p>這邊\(P(x \mid y)= \frac{1}{2}\)表示當我們已知撲克牌花色，硬幣是正面或背面的機率為1/2。事實上，因為這兩件事相互獨立，知不知道花色並沒有任何影響，因此條件熵的結果\(H(X \mid Y)=1\)和只有擲硬幣的資訊熵\(H(X)=1\)是一樣的。</p>
+</li>
+<li>
+<p>讓我們考慮另一種情況，撲克牌花色和硬幣之間有神祕關係，當抽到黑色牌(黑桃、梅花)，硬幣容易出現正面，反之抽到紅色牌(紅心、方塊)，硬幣比較容易出現反面，新的機率如下表。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">黑桃</th>
+<th style="text-align:center">紅心</th>
+<th style="text-align:center">方塊</th>
+<th style="text-align:center">梅花</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">正面</td>
+<td style="text-align:center">4/20</td>
+<td style="text-align:center">2/20</td>
+<td style="text-align:center">2/20</td>
+<td style="text-align:center">4/20</td>
+</tr>
+<tr>
+<td style="text-align:center">反面</td>
+<td style="text-align:center">1/20</td>
+<td style="text-align:center">3/20</td>
+<td style="text-align:center">3/20</td>
+<td style="text-align:center">1/20</td>
+</tr>
+</tbody>
+</table>
+<p>此時的聯合熵 (已經不再是3 bit)：
+$$
+\begin{aligned}
+H(X,Y) &amp;= - \sum_{\substack{x \in {heads,tails} \\ y \in {spades,hearts,diamonds,clubs}}} P(x,y)\ \log_{2} P(x,y) \\ &amp;= -\frac{4}{20} \log_2(\frac{4}{20}) -\frac{1}{20} \log_2(\frac{1}{20}) \\ &amp;\quad -\frac{2}{20} \log_2(\frac{2}{20}) -\frac{3}{20} \log_2(\frac{3}{20}) \\ &amp;\quad -\frac{2}{20} \log_2(\frac{2}{20}) -\frac{3}{20} \log_2(\frac{3}{20}) \\ &amp;\quad -\frac{4}{20} \log_2(\frac{4}{20}) -\frac{1}{20} \log_2(\frac{1}{20}) \\ &amp;\approx 2.85
+\end{aligned}
+$$</p>
+<p>此時的條件熵 (也不再是1 bit)：
+$$
+\begin{aligned}
+H(X \mid Y) &amp;= - \sum_{\substack{x \in {heads,tails} \\ y \in {spades,hearts,diamonds,clubs}}} P(x,y)\ \log_{2} P(x \mid y) \\ &amp;= - \sum_{\substack{x \in {heads,tails} \\ y \in {spades,hearts,diamonds,clubs}}} P(x,y)\ \log_{2}(\frac{P(x,y)}{P(y)}) \\ &amp;= -\frac{4}{20} \log_2(\frac{4/20}{1/4}) -\frac{1}{20} \log_2(\frac{1/20}{1/4}) \\ &amp;\quad -\frac{2}{20} \log_2(\frac{2/20}{1/4}) -\frac{3}{20} \log_2(\frac{3/20}{1/4}) \\ &amp;\quad -\frac{2}{20} \log_2(\frac{2/20}{1/4}) -\frac{3}{20} \log_2(\frac{3/20}{1/4}) \\ &amp;\quad -\frac{4}{20} \log_2(\frac{4/20}{1/4}) -\frac{1}{20} \log_2(\frac{1/20}{1/4}) \\ &amp;\approx 0.85
+\end{aligned}
+$$</p>
+<p>由此可看出，因為花色和正反面的神秘關聯性，只要先得知抽到什麼花色，就會知道正面或是反面的機率高，因此不確定性較小。
+<br><br></p>
+</li>
+</ul>
+<p>而無論X、Y是否相互獨立，皆滿足\(H(X,Y)=H(X \mid Y) + H(Y)\)，推導如下：
+$$
+\begin{aligned}
+H(X,Y) &amp;= - \sum_{x \in X,y \in Y} P(x,y)\ \log_{2} P(x,y) \\ &amp;= - \sum_{x \in X,y \in Y} P(x,y)\ \log_{2}[P(x \mid y)P(y)] \\ &amp;= - \sum_{x \in X,y \in Y} P(x,y)\ [\log_{2} P(x \mid y) + \log_{2} P(y)] \\ &amp;= - \sum_{x \in X,y \in Y} P(x,y)\ \log_{2} P(x \mid y) - \sum_{x \in X,y \in Y} P(x,y)\ \log_{2} P(y) \\ &amp;= - \sum_{x \in X,y \in Y} P(x,y)\ \log_{2} P(x \mid y) - \sum_{y \in Y} P(y)\ \log_{2} P(y) \\ &amp;= H(X \mid Y) + H(Y)
+\end{aligned}
+$$
+<br><br></p>
+<h2 id="相互資訊-mutual-information">相互資訊 (Mutual Information)</h2>
+<p>從神經科學與資訊理論-Part1中，我們一再說明一個概念是：資訊代表減少不確定性。</p>
+<p>現在，讓我們更清楚地把資訊描述成：當已知一個變數時，所減少的不確定性。</p>
+<p>上述的概念，又可以如下的方式表達：全部的不確定性 = 資訊 + 殘餘的不確定性。</p>
+<p>$$H(X) = I(X;Y) + H(X \mid Y)$$</p>
+<p>也就是說，資訊 = 全部的不確定性 - 殘餘的不確定性。</p>
+<p>$$I(X;Y) = H(X) - H(X \mid Y) = \sum_{x \in X, y \in Y} p(x,y)\ log_{2}(\frac{p(x,y)}{p(x)p(y)})$$</p>
+<h3 id="kullback-leibler-divergence-相對熵-d_textkl-relative-entropy">Kullback-Leibler divergence, 相對熵 (\(D_{\text{KL}}\), Relative Entropy)</h3>
+<p>這邊額外插入一個度量方法：</p>
+<p>$$D_{\text{KL}}(p   \mid \mid   q)=\sum_{x \in X} p(x)\ log \frac{p(x)}{q(x)}$$</p>
+<p>\(D_{\text{KL}}\)用來測量兩個分布之間的差異程度，當兩個分布重合時\(D_{\text{KL}}=0\)，而當兩個分布差異愈大時，\(D_{\text{KL}}\)值也愈大，也因此\(D_{\text{KL}}\)又稱為兩個分布的相對熵，但須注意\(D_{\text{KL}}(p   \mid \mid   q) \neq D_{\text{KL}}(q   \mid \mid   p)\)。</p>
+<ul>
+<li>
+<p>如Fig. 1，這裡有3條高斯分布曲線，\(D_{\text{KL}}(藍 \mid \mid 紅) &lt; D_{\text{KL}}(藍 \mid \mid 綠)\)，這裡使用連續版本\(D_{\text{KL}}(p   \mid \mid   q)=\int_{} p(x)\ log \frac{p(x)}{q(x)} dx\)。</p>
+<p><figure><img src="/img/2021/0927/fig_1.png"
+         alt="Fig. 1"/><figcaption>
+            <p>Fig. 1</p>
+        </figcaption>
+</figure>
+
+<br></p>
+</li>
+</ul>
+<p>比較相互資訊、\(D_{\text{KL}}\)的公式，可以發現：</p>
+<p>$$I(X;Y) = D_{\text{KL}}(p(x,y) \mid \mid p(x)p(y))$$</p>
+<p>也就是說，相互資訊在看\(p(x, y)\)、\(p(x)p(y)\)間的差異程度，如果二者互相獨立，此時\(p(x, y) = p(x)p(y)\)，知道其中之一並不會帶給另一方資訊，\(D_{\text{KL}}=0\)。</p>
+<ul>
+<li>
+<p>回到例一，計算知道花色所帶來的資訊：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">黑桃</th>
+<th style="text-align:center">紅心</th>
+<th style="text-align:center">方塊</th>
+<th style="text-align:center">梅花</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">正面</td>
+<td style="text-align:center">1/8</td>
+<td style="text-align:center">1/8</td>
+<td style="text-align:center">1/8</td>
+<td style="text-align:center">1/8</td>
+</tr>
+<tr>
+<td style="text-align:center">反面</td>
+<td style="text-align:center">1/8</td>
+<td style="text-align:center">1/8</td>
+<td style="text-align:center">1/8</td>
+<td style="text-align:center">1/8</td>
+</tr>
+</tbody>
+</table>
+<p>$$I(X;Y) = H(X) - H(X \mid Y) = 1-1=0$$</p>
+</li>
+<li>
+<p>回到例二，也計算知道花色所帶來的資訊：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">黑桃</th>
+<th style="text-align:center">紅心</th>
+<th style="text-align:center">方塊</th>
+<th style="text-align:center">梅花</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">正面</td>
+<td style="text-align:center">4/20</td>
+<td style="text-align:center">2/20</td>
+<td style="text-align:center">2/20</td>
+<td style="text-align:center">4/20</td>
+</tr>
+<tr>
+<td style="text-align:center">反面</td>
+<td style="text-align:center">1/20</td>
+<td style="text-align:center">3/20</td>
+<td style="text-align:center">3/20</td>
+<td style="text-align:center">1/20</td>
+</tr>
+</tbody>
+</table>
+<p>$$I(X;Y) = H(X) - H(X \mid Y) \approx 1-0.85 \approx 0.15$$</p>
+</li>
+</ul>
+<h3 id="相互資訊的對稱性">相互資訊的對稱性</h3>
+<p>最後描述相互資訊的其中一個性質：對稱性。意思是，X提供給Y的資訊量=Y提供給X的資訊量，這也是使用&quot;相互資訊&quot;這個名詞的原因。</p>
+<p>$$
+\begin{aligned}
+I(X;Y) &amp;= H(X) - H(X \mid Y) \\ &amp;= H(X) - (H(X,Y) - H(Y)) \\ &amp;= H(X) + H(Y) - H(X,Y) \\ &amp;= H(Y) - (H(X,Y) - H(X)) \\ &amp;= H(Y) - H(Y \mid X) \\ &amp;= I(Y;X)
+\end{aligned}
+$$</p>
+<p><br><br></p>
+<h2 id="小結">小結</h2>
+<p>當引入時間關係之後，就可以用來測量因果關係，例如已知過去的X，是否能提供資訊給未來的Y。因此在下一篇文中，將介紹傳遞熵(transfer entropy)，用來度量一個變數到另一個變數之間的資訊傳遞量。</p>
+<p>
+
+<style>
+  #callout {
+    background: #F9F9F9;
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  #callout-inner {
+    margin-left: 1em;
+  }
+  @media (max-width: 767px) {
+    #callout {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #callout-inner {
+      margin-left: 0.5em;
+    }
+  }
+</style>
+
+<div id="callout" style="">
+  <div>💡</div>
+	<div id="callout-inner">
+    相互資訊：已知一事件的情況下，減少的不確定性！
+  </div>
+</div>
+
+<br></p>
+<p>原始論文：</p>
+<p>Timme, N. M. &amp; Lapish, C. A tutorial for information theory in neuroscience. <em>eNeuro</em> 5, (2018) doi:<a href='http://doi.org/10.1523/ENEURO.0052-18.2018' target='_blank'>10.1523/ENEURO.0052-18.2018</a>.
+<br><br></p>
+<p>參考文章：</p>
+<ol>
+<li>Cover, T. M. &amp; Thomas, J. A. Elements of information theory, 2nd Edition (Wiley-Interscience, 2006).</li>
+</ol>
+
+      </div>
+      <footer>
+        <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/categories/information-theory/">information theory</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      
+        
+          <li><a class="article-terms-link" href="/tags/information-theory/">information theory</a></li>
+        
+      
+    </ul>
+  
+</div>
+
+      </footer>
+    </div>
+    
+      
+  <script src='https://utteranc.es/client.js'
+          repo='PikaPei/PikaPei.github.io'
+          issue-term='title'
+          issue-number=''
+          label=''
+          theme='github-light'
+          crossorigin='anonymous'
+          async>
+  </script>
+
+
+
+
+    
+  </article>
+  <div class="pagination">
+    
+    
+      <a href="/blog/20210815-%E6%9E%9C%E8%A0%85%E6%B1%82%E5%81%B6%E8%A1%8C%E7%82%BA%E7%9A%84%E8%AA%BF%E6%8E%A7%E6%A9%9F%E5%88%B6/" class="button right"><span>果蠅求偶行為的調控機制</span></a>
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent Posts</h1>
+      </header>
+      
+      <article class="mini-post">
+          <a href="/blog/20210927-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part2/" class="image" style="--bg-image: url('https://PikaPei.github.io/img/2021/0927/entropy.jpg');">
+    <img src="https://PikaPei.github.io/img/2021/0927/entropy.jpg" alt="Proposed Model">
+  </a>
+        <header>
+          <h2><a href="/blog/20210927-%E7%A5%9E%E7%B6%93%E7%A7%91%E5%AD%B8%E8%88%87%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96-part2/">神經科學與資訊理論 - Part 2</a></h2>
+          <time class="published" datetime="2021-09-27 00:00:00 &#43;0000 UTC">September 27, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/20210815-%E6%9E%9C%E8%A0%85%E6%B1%82%E5%81%B6%E8%A1%8C%E7%82%BA%E7%9A%84%E8%AA%BF%E6%8E%A7%E6%A9%9F%E5%88%B6/" class="image" style="--bg-image: url('https://PikaPei.github.io/img/2021/0815/fig_2.png');">
+    <img src="https://PikaPei.github.io/img/2021/0815/fig_2.png" alt="Proposed Model">
+  </a>
+        <header>
+          <h2><a href="/blog/20210815-%E6%9E%9C%E8%A0%85%E6%B1%82%E5%81%B6%E8%A1%8C%E7%82%BA%E7%9A%84%E8%AA%BF%E6%8E%A7%E6%A9%9F%E5%88%B6/">果蠅求偶行為的調控機制</a></h2>
+          <time class="published" datetime="2021-08-15 00:00:00 &#43;0000 UTC">August 15, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/20210711-%E8%AD%98%E5%88%A5%E7%86%9F%E6%82%89%E9%9D%A2%E5%AD%94%E7%9A%84%E7%A5%96%E6%AF%8D%E7%A5%9E%E7%B6%93%E7%BE%A4/" class="image" style="--bg-image: url('https://PikaPei.github.io/img/2021/0711/fig_1.gif');">
+    <img src="https://PikaPei.github.io/img/2021/0711/fig_1.gif" alt="Proposed Model">
+  </a>
+        <header>
+          <h2><a href="/blog/20210711-%E8%AD%98%E5%88%A5%E7%86%9F%E6%82%89%E9%9D%A2%E5%AD%94%E7%9A%84%E7%A5%96%E6%AF%8D%E7%A5%9E%E7%B6%93%E7%BE%A4/">識別熟悉面孔的「祖母神經群」</a></h2>
+          <time class="published" datetime="2021-07-11 00:00:00 &#43;0000 UTC">July 11, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/20210519-%E4%BA%BA%E9%A1%9E%E7%A5%9E%E7%B6%93%E5%85%83%E4%B9%8B%E5%A4%9A%E6%A8%A3%E6%80%A7/" class="image" style="--bg-image: url('https://PikaPei.github.io/img/2021/0519/fig_1.png');">
+    <img src="https://PikaPei.github.io/img/2021/0519/fig_1.png" alt="Proposed Model">
+  </a>
+        <header>
+          <h2><a href="/blog/20210519-%E4%BA%BA%E9%A1%9E%E7%A5%9E%E7%B6%93%E5%85%83%E4%B9%8B%E5%A4%9A%E6%A8%A3%E6%80%A7/">人類神經元之多樣性</a></h2>
+          <time class="published" datetime="2021-05-19 00:00:00 &#43;0000 UTC">May 19, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/20210419-fruit-fly-brain-observatory/" class="image" style="--bg-image: url('https://PikaPei.github.io/img/2021/0419/fig_2.png');">
+    <img src="https://PikaPei.github.io/img/2021/0419/fig_2.png" alt="Proposed Model">
+  </a>
+        <header>
+          <h2><a href="/blog/20210419-fruit-fly-brain-observatory/">Fruit Fly Brain Observatory (FFBO) - 果蠅大腦觀測站</a></h2>
+          <time class="published" datetime="2021-04-19 00:00:00 &#43;0000 UTC">April 19, 2021</time>
+        </header>
+      </article>
+      
+      
+        <footer>
+          <a href="/blog" class="button">See More</a>
+        </footer>
+      
+    </section>
+  
+
+  
+    
+
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/categories/information-theory/">information-theory<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/memory/">memory<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/courtship/">courtship<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/database/">database<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/electrophysiology/">electrophysiology<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/navigation/">navigation<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/neural-network/">neural-network<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>Explore The World of Neuroscience<br>Curious about Memory, Epilepsy, ASD ...</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+  <p class="copyright">
+    © 2021 PikaPei&#39;s Website
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.88.1' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.js"></script>
+    
+    <script>hljs.highlightAll();</script><script src="/js/bundle.min.66150e4b3431a23bfccec0bd30dcd4739c1e74d020a8010d8ac28a48d630b1e0.js" integrity="sha256-ZhUOSzQxojv8zsC9MNzUc5wedNAgqAENisKKSNYwseA="></script>
+    <script src="/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-180152921-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </div>
+  </body>
+</html>
